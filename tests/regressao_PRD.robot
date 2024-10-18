@@ -19,7 +19,7 @@ Test Teardown                                    Encerrar teste
     Selecionar pagamento                         ${dados["tc1"]}
 2
     [Tags]                                       002- Realizar compra via página do produto, com usuário existente no checkout e pagamento via cartão parcelado em 2x
-    ${dados}                                     Get JSON                                          massa_dados_prd.json
+    ${dados}                                     Get JSON                                          massa_dados_PRD.json
     FOR  ${categoria}  IN                        @{dados["tc2"]["categorias"]}
       Acessar a categoria                        ${categoria["categoria"]}
       Acessar PDP 
@@ -33,7 +33,7 @@ Test Teardown                                    Encerrar teste
     Selecionar pagamento                         ${dados["tc2"]}
 3
     [Tags]                                       003- Realizar compra via página de categoria, com usuário existente no inicio e pagamentos via cartão
-    ${dados}                                     Get JSON                                          massa_dados_prd.json
+    ${dados}                                     Get JSON                                          massa_dados_PRD.json
     Acessar página de login
     Login com usuário existente                  ${dados["tc3"]}                         Inicio
     Limpar MiniCart
@@ -48,7 +48,7 @@ Test Teardown                                    Encerrar teste
     Selecionar pagamento                         ${dados["tc3"]}
 4
     [Tags]                                       004- Realizar compra via página de busca e categorias, com novo usuário no inicio e pagamentos via PIX
-    ${dados}                                     Get JSON                                          massa_dados_prd.json
+    ${dados}                                     Get JSON                                          massa_dados_PRD.json
     Acessar página de login
     Cadastro novo usuário                        ${dados["tc4"]}
     Aceitar cookies
@@ -68,7 +68,7 @@ Test Teardown                                    Encerrar teste
     Selecionar pagamento                         ${dados["tc4"]}
 5
     [Tags]                                       005- Realizar compra via página de busca, com usuário existente no inicio e pagamentos via boleto
-    ${dados}                                     Get JSON                                          massa_dados_prd.json
+    ${dados}                                     Get JSON                                          massa_dados_PRD.json
     Acessar página de login
     Login com usuário existente                  ${dados["tc5"]}                         Inicio
     Limpar MiniCart
@@ -83,7 +83,7 @@ Test Teardown                                    Encerrar teste
     Selecionar pagamento                         ${dados["tc5"]}
 6
     [Tags]                                       006- Realizar compra via página do produto, com usuário existente no inicio e pagamentos via boleto
-    ${dados}                                     Get JSON                                          massa_dados_prd.json
+    ${dados}                                     Get JSON                                          massa_dados_PRD.json
     FOR  ${categoria}  IN                        @{dados["tc6"]["categorias"]}
       Acessar a categoria                        ${categoria["categoria"]}
       Acessar PDP

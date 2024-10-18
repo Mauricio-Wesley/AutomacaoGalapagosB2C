@@ -1,6 +1,7 @@
 *** Settings ***
 Resource                                                        ../base_PRD.robot 
 *** Variables ***
+${Input_Email}                                                  input[id=email]
 ${Title_Cart}                                                   css=h2 >> text='Baú de itens'       
 ${Button_Finalizar_Pedido}                                      id=CC-orderSummary-checkout
 ${input_cupom}                                                  id=CC-promotionDetails-promoCode      
@@ -116,20 +117,8 @@ ${input_name_newsletter}                                        css=input[placeh
 ${input_email_newsletter}                                       css=input[placeholder='digite seu EMAIL']
 ${button_receber_newsletter}                                    css=.newsletter-form-submit
 ${button_close_newsletter}                                      css=.modal-newsletter-button button
-${link_youtube}                                                 css=.footer-social-list-item a[title='Assista no Youtube']
-${text_youtube}                                                 css=#inner-header-container yt-formatted-string >> text=Galápagos
-${link_instagram}                                               css=.footer-social-list-item a[title='Siga no Instagram']
-${text_instagram}                                               css=h2 >> text='mundogalapagos'
-${link_facebook}                                                css=.footer-social-list-item a[title='Curta no Facebook']
-${text_facebook}                                                css=h1 >> text='Galápagos'
-${link_twitter}                                                 css=.footer-social-list-item a[title='Siga no Twitter']
-${text_twitter}                                                 css=.css-1dbjc4n.r-6gpygo.r-14gqq1x span >> text='@MundoGalapagos'
-${link_linkedin}                                                css=.footer-social-list-item a[title='Acompanhe no LinkedIn']
-${text_linkedin}                                                css=h1 >> text='Galápagos'
 ${link_entre_linkedin}                                          css=.authwall-join-form__swap-cta button
 ${button_entrar_linkedin}                                       css=button[type="submit"] >> text=Entrar
-${input_email_linkedin}                                         id=session_key
-${input_senha_linkedin}                                         id=session_password
 ${title_termos_e_condicoes}                                     css=#rd-text-k56ra4si strong >> text='TERMOS E CONDIÇÃO'
 ${button_politica_de_privacidade}                               css=.footer-list-item a[title='Política de privacidade']
 ${title_privacidade_e_seguranca}                                css=h1 >> text='Política de privacidade e segurança'
@@ -150,10 +139,6 @@ ${Button_Close_MiniCart}                                        css=.galapagos-m
 ${Logo_Sem_Resultado}                                           id=logo-sem-resultados
 ${title_acompanhe_nossas_aventuras}                             css=h2 >> text=Acompanhe nossas aventuras!
 ${Produto_Sugerido}                                             xpath=(//span[text()="
-${Dropdown_Profile}                                             css=img[alt="Exibir opções"]
-${Button_Meu_Perfil}                                            css=span>a[data-bind="ccLink:'profile'"]
-${Text_Meus_Pedidos}                                            id=CC-customerProfile-myorders-title
-${Text_Foi_Mal}                                                 css=h1 >> text="Foi Mal :("
 ${Input_Quantidade_Cart}                                        xpath=(//input[@class="input-quantity"]) [1]
 ${Button_Aumentar_Quantidade_Cart}                              xpath=(//button[@id="add-button"]) [1]
 ${Button_Diminuir_Quantidade_Cart}                              xpath=(//button[@id="minus-button"]) [1]
