@@ -1,0 +1,265 @@
+{"level":30,"time":"2024-10-18T20:32:36.234Z","pid":61197,"hostname":"wesley","msg":"Listening on 53445"}
+(node:61197) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-10-18T20:32:36.260Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:32:36.261Z","pid":61197,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:32:36.264Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:32:36.264Z","pid":61197,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:32:36.270Z","pid":61197,"hostname":"wesley","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-10-18T20:32:36.619Z","pid":61197,"hostname":"wesley","msg":"Adding browser to stack: chromium, version: 128.0.6613.18"}
+{"level":30,"time":"2024-10-18T20:32:36.620Z","pid":61197,"hostname":"wesley","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-10-18T20:32:36.620Z","pid":61197,"hostname":"wesley","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-10-18T20:32:36.625Z","pid":61197,"hostname":"wesley","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-10-18T20:32:36.626Z","pid":61197,"hostname":"wesley","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-10-18T20:32:36.638Z","pid":61197,"hostname":"wesley","msg":"Changed active context"}
+{"level":30,"time":"2024-10-18T20:32:36.809Z","pid":61197,"hostname":"wesley","msg":"Video path: undefined"}
+{"level":30,"time":"2024-10-18T20:32:36.809Z","pid":61197,"hostname":"wesley","msg":"Changed active page"}
+{"level":30,"time":"2024-10-18T20:32:38.276Z","pid":61197,"hostname":"wesley","msg":"End of node method newPage"}
+{"level":30,"time":"2024-10-18T20:32:38.281Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:38.281Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.acceptCookies in page."}
+{"level":30,"time":"2024-10-18T20:32:40.403Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:40.411Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:40.411Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.acceptCookies in page."}
+{"level":30,"time":"2024-10-18T20:32:40.576Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:40.591Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:32:40.591Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:40.628Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:40.632Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:32:40.632Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:32:40.651Z","pid":61197,"hostname":"wesley","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:32:40.653Z","pid":61197,"hostname":"wesley","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:32:40.654Z","pid":61197,"hostname":"wesley","msg":"Invoking mouse action move with params {\"x\":216.3203125,\"y\":66.5,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2024-10-18T20:32:40.671Z","pid":61197,"hostname":"wesley","msg":"End of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:32:40.676Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:40.676Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=li[class='list-item list-item-nivel'] >> text='Galera' in page."}
+{"level":30,"time":"2024-10-18T20:32:41.787Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:41.791Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:41.791Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:32:43.069Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:43.072Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:43.072Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:32:44.175Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.179Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.179Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:44.183Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.193Z","pid":61197,"hostname":"wesley","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:32:44.194Z","pid":61197,"hostname":"wesley","msg":"Strict mode is disabled, return Locator: css=h2 >> text='Baú de itens' in page."}
+{"level":30,"time":"2024-10-18T20:32:44.198Z","pid":61197,"hostname":"wesley","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:32:44.201Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.201Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:44.224Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.227Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:44.227Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:44.449Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:44.453Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:44.453Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=h1[class='product-title'] in page."}
+{"level":30,"time":"2024-10-18T20:32:46.058Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:46.065Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:46.065Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=cc-prodDetailsAddToCart in page."}
+{"level":30,"time":"2024-10-18T20:32:46.377Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:46.383Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:46.383Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:32:51.383Z","pid":61197,"hostname":"wesley","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+    at waitForElementState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:9785:19)
+    at async PlaywrightServer.waitForElementsState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11377:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2024-10-18T20:32:51.391Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.391Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:32:51.395Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.398Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.398Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:32:51.403Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.406Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:51.406Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.galapagos-minicart-header .close-icon in page."}
+{"level":30,"time":"2024-10-18T20:32:51.446Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:51.449Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.449Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:32:51.453Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.458Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.458Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:32:51.464Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.483Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:32:51.483Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:32:51.495Z","pid":61197,"hostname":"wesley","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:32:51.497Z","pid":61197,"hostname":"wesley","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:32:51.497Z","pid":61197,"hostname":"wesley","msg":"Invoking mouse action move with params {\"x\":216.3203125,\"y\":66.5,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2024-10-18T20:32:51.506Z","pid":61197,"hostname":"wesley","msg":"End of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:32:51.509Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:51.509Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=li[class='list-item list-item-nivel'] >> text='Desafie sua mente' in page."}
+{"level":30,"time":"2024-10-18T20:32:51.612Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:51.615Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:51.615Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:32:52.378Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:52.381Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:52.381Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:32:54.034Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.038Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.038Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:54.279Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.313Z","pid":61197,"hostname":"wesley","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:32:54.313Z","pid":61197,"hostname":"wesley","msg":"Strict mode is disabled, return Locator: css=h2 >> text='Baú de itens' in page."}
+{"level":30,"time":"2024-10-18T20:32:54.325Z","pid":61197,"hostname":"wesley","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:32:54.332Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.332Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:54.398Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.401Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:54.401Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:32:54.749Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:54.752Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:54.752Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=h1[class='product-title'] in page."}
+{"level":30,"time":"2024-10-18T20:32:55.521Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:55.524Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:32:55.524Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=cc-prodDetailsAddToCart in page."}
+{"level":30,"time":"2024-10-18T20:32:55.749Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:32:55.753Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:32:55.753Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:33:00.753Z","pid":61197,"hostname":"wesley","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+    at waitForElementState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:9785:19)
+    at async PlaywrightServer.waitForElementsState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11377:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2024-10-18T20:33:00.758Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.758Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:33:00.762Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.765Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.765Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:33:00.769Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.771Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:00.771Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.galapagos-minicart-header .close-icon in page."}
+{"level":30,"time":"2024-10-18T20:33:00.798Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:00.801Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.801Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:33:00.806Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.811Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.811Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:33:00.816Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.820Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:33:00.820Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=Catalogo in page."}
+{"level":30,"time":"2024-10-18T20:33:00.830Z","pid":61197,"hostname":"wesley","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2024-10-18T20:33:00.832Z","pid":61197,"hostname":"wesley","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:33:00.832Z","pid":61197,"hostname":"wesley","msg":"Invoking mouse action move with params {\"x\":216.3203125,\"y\":66.5,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2024-10-18T20:33:00.844Z","pid":61197,"hostname":"wesley","msg":"End of node method mouseMove"}
+{"level":30,"time":"2024-10-18T20:33:00.847Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:00.847Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=li[class='list-item list-item-nivel'] >> text='Morra de rir' in page."}
+{"level":30,"time":"2024-10-18T20:33:00.951Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:00.953Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:00.953Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:33:01.671Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:01.675Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:01.675Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//img[@class='img-responsive product-cover-image'])[1] in page."}
+{"level":30,"time":"2024-10-18T20:33:03.704Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.707Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.707Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:33:03.716Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.724Z","pid":61197,"hostname":"wesley","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:33:03.725Z","pid":61197,"hostname":"wesley","msg":"Strict mode is disabled, return Locator: css=h2 >> text='Baú de itens' in page."}
+{"level":30,"time":"2024-10-18T20:33:03.731Z","pid":61197,"hostname":"wesley","msg":"End of node method getElementCount"}
+{"level":30,"time":"2024-10-18T20:33:03.734Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.735Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:33:03.738Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.741Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:03.741Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover']) [1] in page."}
+{"level":30,"time":"2024-10-18T20:33:03.850Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:03.853Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:03.853Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=h1[class='product-title'] in page."}
+{"level":30,"time":"2024-10-18T20:33:06.395Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:06.401Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:06.401Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=cc-prodDetailsAddToCart in page."}
+{"level":30,"time":"2024-10-18T20:33:06.636Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:06.640Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:06.641Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:33:11.640Z","pid":61197,"hostname":"wesley","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+    at waitForElementState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:9785:19)
+    at async PlaywrightServer.waitForElementsState (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11377:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2024-10-18T20:33:11.644Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.644Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.logo_iguana in page."}
+{"level":30,"time":"2024-10-18T20:33:11.648Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.651Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.651Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:33:11.658Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.661Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:11.661Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.galapagos-minicart-header .close-icon in page."}
+{"level":30,"time":"2024-10-18T20:33:11.705Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:11.708Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.708Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:33:11.712Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.716Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.716Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.cart-container i in page."}
+{"level":30,"time":"2024-10-18T20:33:11.723Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:11.727Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:11.727Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.cart-container i in page."}
+{"level":30,"time":"2024-10-18T20:33:12.063Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:12.066Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:12.066Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.open .galapagos-minicart-header in page."}
+{"level":30,"time":"2024-10-18T20:33:12.072Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:12.074Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:12.074Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=a >> text='Ver meus itens em baú' in page."}
+{"level":30,"time":"2024-10-18T20:33:12.547Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:12.550Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:12.550Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=h2 >> text='Baú de itens' in page."}
+{"level":30,"time":"2024-10-18T20:33:15.528Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:15.533Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:15.534Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=CC-orderSummary-checkout in page."}
+{"level":30,"time":"2024-10-18T20:33:15.611Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:15.614Z","pid":61197,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-18T20:33:15.614Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with id=CC-orderSummary-checkout in page."}
+{"level":30,"time":"2024-10-18T20:33:16.552Z","pid":61197,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-10-18T20:33:16.555Z","pid":61197,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:16.555Z","pid":61197,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=input[id=email], div[class='header-content'] h2[class='header-title-page'] in page."}
+{"level":30,"time":"2024-10-18T20:33:19.004Z","pid":61197,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-10-18T20:33:19.008Z","pid":61197,"hostname":"wesley","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-10-18T20:33:19.090Z","pid":61197,"hostname":"wesley","msg":"Removed page=52625449-4148-413d-9589-5e6dee44ebd3 from context=f0cfc4c9-6179-4f71-9718-a0d5c57a854d page stack"}
+{"level":30,"time":"2024-10-18T20:33:19.220Z","pid":61197,"hostname":"wesley","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:10748:15)
+    at PlaywrightServer.getActiveBrowser (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11364:59)
+    at PlaywrightServer.setTimeout (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11603:57)
+    at Object.onReceiveHalfClose (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-10-18T20:33:19.225Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:33:19.225Z","pid":61197,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:10748:15)
+    at PlaywrightServer.getActiveBrowser (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11364:59)
+    at PlaywrightServer.setTimeout (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/index.js:11603:57)
+    at Object.onReceiveHalfClose (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (/home/wesley/myenv/lib/python3.12/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-10-18T20:33:19.230Z","pid":61197,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:33:19.230Z","pid":61197,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-18T20:33:19.262Z","pid":61197,"hostname":"wesley","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-10-18T20:33:19.262Z","pid":61197,"hostname":"wesley","msg":"End of node method closeAllBrowsers"}
