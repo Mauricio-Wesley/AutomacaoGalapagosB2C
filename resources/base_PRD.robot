@@ -8,7 +8,7 @@ Resource                                         actions/actions_PRD.robot
 Resource                                         dictionary/dictionary_PRD.robot
 *** Variables ***
 ${BROWSER}                                       chromium
-${HEADLESS}                                      ${True}
+${HEADLESS}                                      ${False}
 ${DEFAULT_TIMEOUT}                               15
 ${HOME_PAGE}                                     https://www.mundogalapagos.com.br/
 * Keywords *

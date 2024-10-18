@@ -2,11 +2,11 @@
     "tc1":{
         "name":              "Marlene",
         "lastname":          "Silva",
-        "nome_completo":     "Marlene Silva",
-        "senha":             "Nunc@123",
+        "fullname":          "Marlene Silva",
+        "password":          "Nunc@123",
         "telephone":         "(12)992655545",
         "cep":               "12052-120",
-        "numero":            "123",
+        "number":            "123",
         "pagamento":         "Cartão de Crédito",
         "complemento":       "casa",
         "numero_cartao":     "4001020000000009",
@@ -22,10 +22,10 @@
         ]       
     },
     "tc2":{
-        "email":             "test@email.com",
-        "senha":             "nunc@123",
-        "nome_completo":     "Mauro Alves",
-        "pagamento":         "Cartão de Crédito",
+        "email":             "vanokir754@padvn.com",
+        "password":          "Nunc@123",
+        "fullname":          "Mauro Alves",
+        "payment":           "Cartão de Crédito",
         "numero_cartao":     "4001020000000009",
         "nome_titular":      "Mauro Alves",
         "cvv":               "737",
@@ -39,18 +39,16 @@
         ]      
     },
     "tc3":{
-        "email":             "testeautomatizadojbqa@gmail.com",
-        "senha":             "nunc@123",
-        "nome_completo":     "Mauro Alves",
-        "pagamento":         "Cartão de Crédito",
+        "email":             "vanokir754@padvn.com",
+        "password":          "Nunc@123",
+        "fullname":          "Mauro Alves",
+        "payment":           "Cartão de Crédito",
         "numero_cartao":     "4001020000000009",
-        "nome_titular":      "Mauro Alves",
         "cvv":               "737",
         "mes":               "03",
         "ano":               "2030",
         "parcelamento":      "3",
-        "cupom":             "EPRAMIM",
-        "nome":              "Marlene",
+        "name":              "Marlene",
         "categorias":[
             {"categoria":    "Galera"},
             {"categoria":    "Torcida fanática"},
@@ -58,15 +56,13 @@
         ]
     },
     "tc4":{
-        "senha":             "nunc@123",
-        "nome":              "Armando",
-        "sobrenome":         "Gomes",
+        "password":          "nunc@123",
+        "name":              "Armando",
+        "lastname":          "Gomes",
         "cep":               "12080-330",
-        "confirmarSenha":    "nunc@123",
-        "cupom":             "EPRAMIM",
-        "telefone":          "(12)992655545",
+        "telephone":         "(12)992655545",
         "complemento":       "casa",
-        "pagamento":         "pix",
+        "payment":           "pix",
         "categorias":[
             {"categoria":    "Todos os gostos"},
             {"categoria":    "Família"}
@@ -76,12 +72,11 @@
         ]         
     },
     "tc5":{
-        "email":             "test@email.com",
-        "senha":             "nunc@123",
-        "nome_completo":     "Mauro Alves",
-        "nome":              "Marlene",
+        "email":             "vanokir754@padvn.com",
+        "password":          "Nunc@123",
+        "fullname":          "Mauro Alves",
+        "name":              "Marlene",
         "pagamento":         "Boleto",
-        "cupom":             "EPRAMIM",
         "produtos":[
             {"produto":      "Dobble"},
             {"produto":      "Dixit"}
@@ -91,11 +86,11 @@
         ]      
     },
     "tc6":{
-        "email":             "test@email.com",
-        "senha":             "nunc@123",
-        "nome_completo":     "Mauro Alves",
-        "nome":              "Marlene",
-        "pagamento":         "Boleto",
+        "email":             "vanokir754@padvn.com",
+        "password":          "Nunc@123",
+        "fullname":          "Mauro Alves",
+        "name":              "Marlene",
+        "payment":           "Boleto",
         "produto":           "Dixit",
         "categorias":[
             {"categoria":    "Fãs de cinema"},

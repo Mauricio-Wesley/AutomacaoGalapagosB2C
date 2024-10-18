@@ -65,3 +65,7 @@ ${Button_Delete_MiniCart}                                       css=.delete-butt
 ${Text_Empty_MiniCart}                                          css=.empty-text
 ${MiniCart_Open}                                                css=.open .galapagos-minicart-header
 ${Button_Continue_Login}                                        css=.form-button.continue.isActive
+${Checkbox_Accept_Terms}                                        css=.iconTerm[data-bind="click: $parent.acceptTems.bind($parent)"]
+${Button_Create_Account}                                        css=button >> text='Criar minha conta'
+${Text_Account_Created}                                         text=Conta criada com sucesso!
+${Button_Go_Home}                                               css=button >> text='Ir para a home'

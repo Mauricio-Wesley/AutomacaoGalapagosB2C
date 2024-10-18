@@ -49,9 +49,12 @@ Cadastro novo usuário
     Type Text                                    ${Input_Name}                                     ${dados["name"]}              5ms
     Type Text                                    ${Input_Last_Name}                                ${dados["lastname"]}          5ms
     Type Text                                    ${Input_CPF}                                      ${cpf.stdout}                 5ms
-    Type Text                                    ${Input_Telephone}                                ${dados["telefone"]}          5ms
-    Type Text                                    ${Input_Create_Password}                          ${dados["senha"]}             5ms
-    Type Text                                    ${Input_Confirm_Password}                         ${dados["senha"]}             5ms
+    Type Text                                    ${Input_Telephone}                                ${dados["telephone"]}         5ms
+    Type Text                                    ${Input_Create_Password}                          ${dados["password"]}          5ms
+    Type Text                                    ${Input_Confirm_Password}                         ${dados["password"]}          5ms
+    Click                                        ${Checkbox_Accept_Terms}
+    Wait For Elements State                      ${Text_Account_Created}                           visible
+    Click                                        ${Button_Go_Home}
 Ir para entrega
     Wait For Elements State                      ${button_ir_para_entrega}                         visible                       ${DEFAULT_TIMEOUT}
     Aguardar loader                              ${Loader}
@@ -70,12 +73,12 @@ Cadastrar novo endereço
     Type Text                                    ${input_cep}                                      ${dados["cep"]}               5ms
     Type Text                                    ${input_numero_da_casa}                           254                           5ms
     Click                                        ${input_complemento} 
-    Type Text                                    ${input_complemento}                              ${dados["complemento"]}       5ms
-    Type Text                                    ${input_numero}                                   ${dados["telefone"]}          5ms
+    Type Text                                    ${input_complemento}                              ${dados["fullname"]}       5ms
+    Type Text                                    ${input_numero}                                   ${dados["telephone"]}          5ms
     Aguardar loader                              ${Loader}
 Selecionar pagamento
     [Arguments]                                  ${dados}
-    IF  "${dados["pagamento"]}" == "Cartão de Crédito"
+    IF  "${dados["payment"]}" == "Cartão de Crédito"
         Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_boleto}
         Click                                    ${opt_cartao}
@@ -87,11 +90,11 @@ Selecionar pagamento
         Select Options By                        ${select_ano_de_vencimento}                       value                         ${dados["ano"]}
         Type Text                                ${input_codigo_de_seguranca}                      ${dados["cvv"]}               5ms
     END
-    IF  "${dados["pagamento"]}" == "Boleto"
+    IF  "${dados["payment"]}" == "Boleto"
         Wait For Elements State                  ${opt_boleto}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_boleto}
     END
-    IF  "${dados["pagamento"]}" == "pix"
+    IF  "${dados["payment"]}" == "pix"
         Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_pix}
         Aguardar loader                          ${Loader}
@@ -106,14 +109,8 @@ Login com usuário existente
     Type Text                                    ${Input_Email}                                    ${dados["email"]}             50ms
     Wait For Elements State                      ${Button_Continue_Login}
     Click                                        ${Button_Continue_Login}
-    Type Text                                    ${Input_Password}                                 ${dados["senha"]}             50ms
+    Type Text                                    ${Input_Password}                                 ${dados["password"]}          50ms
     Click                                        ${Button_Login_In}
-    #Wait For Elements State                      css=${Title_Acesso_Conta}                         hidden                        ${DEFAULT_TIMEOUT}
-    #IF  "${pagina}" == "Checkout"
-    #  Wait For Elements State                    css=${Title_Checkout}                             visible                       ${DEFAULT_TIMEOUT}
-    #ELSE IF  "${pagina}" == "Inicio"
-    #  Wait For Elements State                    ${Container_Carrossel_Home}                       visible                       ${DEFAULT_TIMEOUT}
-    #END
 Acessar página de login
     Wait For Elements State                      ${Button_Entrar_Cadastrar}                        visible                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_Entrar_Cadastrar}
