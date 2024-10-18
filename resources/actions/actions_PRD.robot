@@ -1,18 +1,18 @@
 *** Settings ***
-Documentation                                                       Ações da página de carrinho
-Resource                                                            ../base_PRD.robot 
+Documentation                                    Ações da página de carrinho
+Resource                                         ../base_PRD.robot 
 *** Keywords ***
 Aguardar loader
     [Arguments]                                  ${Loader}
     Run Keyword And Ignore Error                 Wait For Elements State                           ${Loader}                     visible  5
     Wait For Elements State                      ${Loader}                                         hidden                        ${DEFAULT_TIMEOUT}
 Aceitar cookies
-    Wait For Elements State                      ${button_aceitar_cookies}                         visible                       ${DEFAULT_TIMEOUT}
-    Click                                        ${button_aceitar_cookies}
+    Wait For Elements State                      ${Button_Accept_Cookies}                          visible                       ${DEFAULT_TIMEOUT}
+    Click                                        ${Button_Accept_Cookies}
 Acessar a categoria
     [Arguments]                                  ${categoria}
-    Wait For Elements State                      ${dropdown_catalago}                              visible                       ${DEFAULT_TIMEOUT}
-    Mouse Move Relative To                       ${dropdown_catalago}
+    Wait For Elements State                      ${Dropdown_Catalago}                              visible                       ${DEFAULT_TIMEOUT}
+    Mouse Move Relative To                       ${Dropdown_Catalago}
     Click                                        css=li[class='list-item list-item-nivel'] >> text='${categoria}'
     Wait For Elements State                      ${Product_Card}                                   hidden                        ${DEFAULT_TIMEOUT}
     Wait For Elements State                      ${Product_Card}                                   visible                       ${DEFAULT_TIMEOUT}
@@ -43,16 +43,15 @@ Cadastro novo usuário
     [Arguments]                                  ${dados}
     ${email}                                     Run Process                                       python                        ${EXECDIR}/resources/fixtures/create_email.py
     ${cpf}                                       Run Process                                       python                        ${EXECDIR}/resources/fixtures/create_cpf.py
-    Wait For Elements State                      ${text_subtitle_meu_primeiro_acesso}              visible                       ${DEFAULT_TIMEOUT}
-    Type Text                                    ${input_nome_primeiro_login}                      ${dados["nome"]}              5ms
-    Type Text                                    ${input_sobrenome_primeiro_login}                 ${dados["sobrenome"]}         5ms
-    Type Text                                    ${input_cpf_primeiro_login}                       ${cpf.stdout}                 5ms
-    Type Text                                    ${input_numero_de_telefone_primeiro_login}        ${dados["telefone"]}          5ms
-    Type Text                                    ${input_email_primeiro_login}                     ${email.stdout}               5ms
-    Type Text                                    ${input_senha_primeiro_login}                     ${dados["senha"]}             5ms
-    Type Text                                    ${input_confirmar_senha_primeiro_login}           ${dados["confirmarSenha"]}    5ms
-    Click                                        ${button_acessar_primeiro_login}
-    Wait For Elements State                      ${Button_Lupa}, ${Title_Checkout}                 visible                       ${DEFAULT_TIMEOUT}
+    Wait For Elements State                      ${Input_Email}                                    visible                       ${DEFAULT_TIMEOUT}
+    Type Text                                    ${Input_Email}                                    ${email.stdout}               5ms
+    Click                                        ${Button_Continue_Login}
+    Type Text                                    ${Input_Name}                                     ${dados["name"]}              5ms
+    Type Text                                    ${Input_Last_Name}                                ${dados["lastname"]}          5ms
+    Type Text                                    ${Input_CPF}                                      ${cpf.stdout}                 5ms
+    Type Text                                    ${Input_Telephone}                                ${dados["telefone"]}          5ms
+    Type Text                                    ${Input_Create_Password}                          ${dados["senha"]}             5ms
+    Type Text                                    ${Input_Confirm_Password}                         ${dados["senha"]}             5ms
 Ir para entrega
     Wait For Elements State                      ${button_ir_para_entrega}                         visible                       ${DEFAULT_TIMEOUT}
     Aguardar loader                              ${Loader}
@@ -76,7 +75,7 @@ Cadastrar novo endereço
     Aguardar loader                              ${Loader}
 Selecionar pagamento
     [Arguments]                                  ${dados}
-    IF                                           "${dados["pagamento"]}" == "Cartão de Crédito"
+    IF  "${dados["pagamento"]}" == "Cartão de Crédito"
         Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_boleto}
         Click                                    ${opt_cartao}
@@ -88,11 +87,11 @@ Selecionar pagamento
         Select Options By                        ${select_ano_de_vencimento}                       value                         ${dados["ano"]}
         Type Text                                ${input_codigo_de_seguranca}                      ${dados["cvv"]}               5ms
     END
-    IF                                           "${dados["pagamento"]}" == "Boleto"
+    IF  "${dados["pagamento"]}" == "Boleto"
         Wait For Elements State                  ${opt_boleto}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_boleto}
     END
-    IF                                           "${dados["pagamento"]}" == "pix"
+    IF  "${dados["pagamento"]}" == "pix"
         Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${opt_pix}
         Aguardar loader                          ${Loader}
@@ -104,22 +103,24 @@ Ir para pagamento
     Wait For Elements State                      ${opt_boleto}                                     visible                       ${DEFAULT_TIMEOUT}
 Login com usuário existente
     [Arguments]                                  ${dados}                                          ${pagina}
-    Type Text                                    ${input_email_login}                              ${dados["email"]}             50ms
-    Type Text                                    ${input_senha_login}                              ${dados["senha"]}             50ms
-    Click                                        ${Button_Acessar_Login}
-    Wait For Elements State                      css=${Title_Acesso_Conta}                         hidden                        ${DEFAULT_TIMEOUT}
-    IF  "${pagina}" == "Checkout"
-      Wait For Elements State                    css=${Title_Checkout}                             visible                       ${DEFAULT_TIMEOUT}
-    ELSE IF  "${pagina}" == "Inicio"
-      Wait For Elements State                    ${Container_Carrossel_Home}                       visible                       ${DEFAULT_TIMEOUT}
-    END
+    Type Text                                    ${Input_Email}                                    ${dados["email"]}             50ms
+    Wait For Elements State                      ${Button_Continue_Login}
+    Click                                        ${Button_Continue_Login}
+    Type Text                                    ${Input_Password}                                 ${dados["senha"]}             50ms
+    Click                                        ${Button_Login_In}
+    #Wait For Elements State                      css=${Title_Acesso_Conta}                         hidden                        ${DEFAULT_TIMEOUT}
+    #IF  "${pagina}" == "Checkout"
+    #  Wait For Elements State                    css=${Title_Checkout}                             visible                       ${DEFAULT_TIMEOUT}
+    #ELSE IF  "${pagina}" == "Inicio"
+    #  Wait For Elements State                    ${Container_Carrossel_Home}                       visible                       ${DEFAULT_TIMEOUT}
+    #END
 Acessar página de login
     Wait For Elements State                      ${Button_Entrar_Cadastrar}                        visible                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_Entrar_Cadastrar}
-    Wait For Elements State                      ${input_email_login}                              visible                       ${DEFAULT_TIMEOUT}
+    Wait For Elements State                      ${Input_Email}                                    visible                       ${DEFAULT_TIMEOUT}
 Acessar PDP
     ${Vrf_Cart}                                  Get Element Count                                 ${Title_Cart}
-    IF    ${Vrf_Cart} > 0
+    IF  ${Vrf_Cart} > 0
         Wait For Elements State                  ${img_produto_cart}                               visible                       ${DEFAULT_TIMEOUT}
         Click                                    ${img_produto_cart}
     ELSE

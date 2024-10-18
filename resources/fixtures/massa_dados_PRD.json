@@ -1,109 +1,106 @@
 {
     "tc1":{
-        "nome":                 "Marlene",
-        "sobrenome":            "Silva",
-        "nome_completo":        "Mauro Alves",
-        "senha":                "nunc@123",
-        "confirmarSenha":       "nunc@123",
-        "cpf":                  "106.798.360-04",
-        "telefone":             "(12)992655545",
-        "cep":                  "12052-120",
-        "numero":               "123",
-        "pagamento":            "Cartão de Crédito",
-        "complemento":          "casa",
-        "numero_cartao":        "4001020000000009",
-        "nome_titular":         "Mauro Alves",
-        "cvv":                  "737",
-        "mes":                  "03",
-        "ano":                  "2030",
-        "parcelamento":         "1",
+        "name":              "Marlene",
+        "lastname":          "Silva",
+        "nome_completo":     "Marlene Silva",
+        "senha":             "Nunc@123",
+        "telephone":         "(12)992655545",
+        "cep":               "12052-120",
+        "numero":            "123",
+        "pagamento":         "Cartão de Crédito",
+        "complemento":       "casa",
+        "numero_cartao":     "4001020000000009",
+        "nome_titular":      "Mauro Alves",
+        "cvv":               "737",
+        "mes":               "03",
+        "ano":               "2030",
+        "parcelamento":      "1",
         "categorias":[
-            {"categoria":       "Família"},  
-            {"categoria":       "Viva Aventuras"},  
-            {"categoria":       "Torcida fanática"}
+            {"categoria":    "Família"},  
+            {"categoria":    "Viva Aventuras"},  
+            {"categoria":    "Torcida fanática"}
         ]       
     },
     "tc2":{
-        "email":                "test@email.com",
-        "senha":                "nunc@123",
-        "nome_completo":        "Mauro Alves",
-        "pagamento":            "Cartão de Crédito",
-        "numero_cartao":        "4001020000000009",
-        "nome_titular":         "Mauro Alves",
-        "cvv":                  "737",
-        "mes":                  "03",
-        "ano":                  "2030",
-        "parcelamento":         "2",
+        "email":             "test@email.com",
+        "senha":             "nunc@123",
+        "nome_completo":     "Mauro Alves",
+        "pagamento":         "Cartão de Crédito",
+        "numero_cartao":     "4001020000000009",
+        "nome_titular":      "Mauro Alves",
+        "cvv":               "737",
+        "mes":               "03",
+        "ano":               "2030",
+        "parcelamento":      "2",
         "categorias":[
-            {"categoria":       "Galera"},
-            {"categoria":       "Desafie sua mente"},
-            {"categoria":       "Morra de rir"}
+            {"categoria":    "Galera"},
+            {"categoria":    "Desafie sua mente"},
+            {"categoria":    "Morra de rir"}
         ]      
     },
     "tc3":{
-        "email":                "test@email.com",
-        "senha":                "nunc@123",
-        "nome_completo":        "Mauro Alves",
-        "pagamento":            "Cartão de Crédito",
-        "numero_cartao":        "4001020000000009",
-        "nome_titular":         "Mauro Alves",
-        "cvv":                  "737",
-        "mes":                  "03",
-        "ano":                  "2030",
-        "parcelamento":         "3",
-        "cupom":                "EPRAMIM",
-        "nome":                 "Marlene",
-        "produto":              "asfdadsfsdfsdfsdfsdfsdf",              
+        "email":             "testeautomatizadojbqa@gmail.com",
+        "senha":             "nunc@123",
+        "nome_completo":     "Mauro Alves",
+        "pagamento":         "Cartão de Crédito",
+        "numero_cartao":     "4001020000000009",
+        "nome_titular":      "Mauro Alves",
+        "cvv":               "737",
+        "mes":               "03",
+        "ano":               "2030",
+        "parcelamento":      "3",
+        "cupom":             "EPRAMIM",
+        "nome":              "Marlene",
         "categorias":[
-            {"categoria":       "Galera"},
-            {"categoria":       "Torcida fanática"},
-            {"categoria":       "Fãs de cinema"}
+            {"categoria":    "Galera"},
+            {"categoria":    "Torcida fanática"},
+            {"categoria":    "Fãs de cinema"}
         ]
     },
     "tc4":{
-        "senha":                "nunc@123",
-        "nome":                 "Armando",
-        "sobrenome":            "Gomes",
-        "cep":                  "12080-330",
-        "confirmarSenha":       "nunc@123",
-        "cupom":                "EPRAMIM",
-        "telefone":             "(12)992655545",
-        "complemento":          "casa",
-        "pagamento":            "pix",
+        "senha":             "nunc@123",
+        "nome":              "Armando",
+        "sobrenome":         "Gomes",
+        "cep":               "12080-330",
+        "confirmarSenha":    "nunc@123",
+        "cupom":             "EPRAMIM",
+        "telefone":          "(12)992655545",
+        "complemento":       "casa",
+        "pagamento":         "pix",
         "categorias":[
-            {"categoria":       "Todos os gostos"},
-            {"categoria":       "Família"}
+            {"categoria":    "Todos os gostos"},
+            {"categoria":    "Família"}
         ],
         "produtos":[
-            {"produto":         "Dobble"}
+            {"produto":      "Dobble"}
         ]         
     },
     "tc5":{
-        "email":                "test@email.com",
-        "senha":                "nunc@123",
-        "nome_completo":        "Mauro Alves",
-        "nome":                 "Marlene",
-        "pagamento":            "Boleto",
-        "cupom":                "EPRAMIM",
+        "email":             "test@email.com",
+        "senha":             "nunc@123",
+        "nome_completo":     "Mauro Alves",
+        "nome":              "Marlene",
+        "pagamento":         "Boleto",
+        "cupom":             "EPRAMIM",
         "produtos":[
-            {"produto":         "Dobble"},
-            {"produto":         "Dixit"}
+            {"produto":      "Dobble"},
+            {"produto":      "Dixit"}
         ],
         "categorias":[
-            {"categoria":      "À dois"}
+            {"categoria":    "À dois"}
         ]      
     },
     "tc6":{
-        "email":                "test@email.com",
-        "senha":                "nunc@123",
-        "nome_completo":        "Mauro Alves",
-        "nome":                 "Marlene",
-        "pagamento":            "Boleto",
-        "produto":              "Dixit",
+        "email":             "test@email.com",
+        "senha":             "nunc@123",
+        "nome_completo":     "Mauro Alves",
+        "nome":              "Marlene",
+        "pagamento":         "Boleto",
+        "produto":           "Dixit",
         "categorias":[
-            {"categoria":       "Fãs de cinema"},
-            {"categoria":       "Família"},
-            {"categoria":       "Aprenda Brincando"}
+            {"categoria":    "Fãs de cinema"},
+            {"categoria":    "Família"},
+            {"categoria":    "Aprenda Brincando"}
         ]   
     }
 }

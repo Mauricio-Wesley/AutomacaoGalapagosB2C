@@ -22,45 +22,46 @@ ${input_codigo_de_seguranca}                                    id=CC-checkoutPa
 ${Button_Entrar_Cadastrar}                                      css=a >> text='Entrar ou Cadastrar'
 ${Input_Search}                                                 css=.area-input input
 ${Button_Lupa}                                                  .desktop-search #lupa-desktop img
-${dropdown_catalago}                                            id=Catalogo
+${Dropdown_Catalago}                                            id=Catalogo
 ${text_subtitle_meu_primeiro_acesso}                            xpath=//h2[text()='Meu Primeiro Acesso']                                        
-${input_nome_primeiro_login}                                    id=CC-acessoCadastro-firstName                                                 
-${input_sobrenome_primeiro_login}                               id=CC-acessoCadastro-lastName                                        
-${input_cpf_primeiro_login}                                     id=CC-acessoCadastro-document                                                            
-${input_numero_de_telefone_primeiro_login}                      id=CC-acessoCadastro-phoneNumber                                          
+${Input_Name}                                                   id=CC-acessoCadastro-firstName
+${Input_Last_Name}                                              id=CC-acessoCadastro-lastName
+${Input_Social_Name}                                            id=socialName
+${Input_CPF}                                                    id=CC-acessoCadastro-document                                                       
+${Input_Telephone}                                              id=CC-acessoCadastro-phoneNumber                                          
 ${input_email_primeiro_login}                                   xpath=(//input[@id='CC-userRegistration-emailAddress'])[2]                                            
-${input_senha_primeiro_login}                                   id=CC-acessoCadastro-password        
-${input_confirmar_senha_primeiro_login}                         id=CC-acessoCadastro-confirmpassword                            
+${Input_Create_Password}                                        id=CC-acessoCadastro-password
+${Input_Confirm_Password}                                       id=CC-acessoCadastro-confirmpassword
 ${button_acessar_primeiro_login}                                id=CC-acessoCadastro-register-submit
 ${input_email_login}                                            id=CC-acessoCadastro-login-email
 ${input_email_popup}                                            id=CC-login-input
 ${input_senha_popup}                                            id=CC-login-password-input
-${input_senha_login}                                            id=CC-acessoCadastro-login-Passwd
-${Button_Acessar_Login}                                         id=CC-acessoCadastro-login-submit
+${Input_Password}                                               id=password
+${Button_Login_In}                                              css=div[class='form-button isActive']
 ${button_acessar_login_modal}                                   id=CC-userLoginSubmit                                                 
 ${Button_Adicionar_PLP}                                         xpath=(//div[@class='button-add-cart'])
 ${Button_Adiconar_PDP}                                          id=cc-prodDetailsAddToCart
 ${Breadcrumb}                                                   css=#breadcrumbTrail span >> text='
-${itens_cart}                                                   css=div[class="quantity-cart-items"]>span
-${button_minicart}                                              css=.cart-container i
+${Itens_Cart}                                                   css=div[class="quantity-cart-items"]>span
+${Button_Minicart}                                              css=.cart-container i
 ${Title_Checkout}                                               div[class='header-content'] h2[class='header-title-page']
-${opt_cartao}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[1]
-${opt_boleto}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[2]
-${opt_pix}                                                      xpath=(//ul[@class="nav nav-tabs"]/li)[3]
+${Opt_Cartao}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[1]
+${Opt_Boleto}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[2]
+${Opt_Pix}                                                      xpath=(//ul[@class="nav nav-tabs"]/li)[3]
 ${Loader}                                                       id=cc-spinner
 ${Loader_Galapagos}                                             css=.logo_iguana
 ${text_titulo_PDP}                                              css=h1[class='product-title']
 ${Button_Ver_Itens_Bau}                                         css=a >> text='Ver meus itens em baú'
 ${Product_Card}                                                 xpath=(//img[@class='img-responsive product-cover-image'])[1]
-${button_aceitar_cookies}                                       css=.acceptCookies
+${Button_Accept_Cookies}                                        css=.acceptCookies
 ${Button_Close_MiniCart}                                        css=.galapagos-minicart-header .close-icon
 ${img_produto_cart}                                             xpath=(//img[@class="img-responsive"]) [1]
 ${Button_Enviar_Este_Endereco}                                  css=button > span >> text=Enviar para este Endereço
 ${Container_Carrossel_Home}                                     div[class='category-area']
-${MiniCart_Open}                                                css=.open .galapagos-minicart-header
 ${Product_Box}                                                  xpath=(//div[@class='button-add-cart']/../../../div[@class='product-cover'])
 ${Title_Acesso_Conta}                                           h2[class='acesso-title']
 ${Button_Trash_MiniCart}                                        xpath=(//button[@class='trash-icon'])
 ${Button_Delete_MiniCart}                                       css=.delete-button
 ${Text_Empty_MiniCart}                                          css=.empty-text
 ${MiniCart_Open}                                                css=.open .galapagos-minicart-header
+${Button_Continue_Login}                                        css=.form-button.continue.isActive
