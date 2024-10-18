@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.3 on linux)" generated="2024-10-18T15:12:22.425403" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/wesley/Documentos/Automações/OceanoB2B/tests">
+<suite id="s1-s1" name="regressao PRD" source="/home/wesley/Documentos/Automações/OceanoB2B/tests/regressao_PRD.robot">
+<test id="s1-s1-t1" name="1" line="6">
+<kw name="Acessar o site" owner="base_PRD" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-10-18T15:12:22.938530" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/wesley/Documentos/Automa\u00e7\u00f5es/OceanoB2B/logs/TST/241018/1/browser/traces/3e5fbbd9-1a06-485d-954f-3ed86470e9ea"}</msg>
+<msg time="2024-10-18T15:12:23.315546" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/wesley/Documentos/Automações/OceanoB2B/logs/TST/241018/1/browser/traces/3e5fbbd9-1a06-485d-954f-3ed86470e9ea"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-10-18T15:12:22.937741" elapsed="0.377964"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-10-18T15:12:24.504968" level="INFO">Successfully initialized new page object and opened url: https://www.mundogalapagos.com.br/</msg>
+<msg time="2024-10-18T15:12:24.505047" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>url=${HOME_PAGE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-10-18T15:12:23.315935" elapsed="1.189255"/>
+</kw>
+<kw name="Aceitar cookies" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:27.730097" level="INFO">Waited for Element with selector css=.acceptCookies at state visible</msg>
+<arg>${button_aceitar_cookies}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:24.505882" elapsed="3.224377"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:27.731049" level="INFO">Clicks the element 'css=.acceptCookies'.</msg>
+<arg>${button_aceitar_cookies}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:27.730486" elapsed="0.455372"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:24.505469" elapsed="3.680514"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:22.937001" elapsed="5.249072"/>
+</kw>
+<kw name="Get JSON" owner="base_PRD">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-10-18T15:12:28.186833" level="INFO" html="true">Getting file '&lt;a href="file:///home/wesley/Documentos/Automações/OceanoB2B/resources/fixtures/massa_dados_PRD.json"&gt;/home/wesley/Documentos/Automações/OceanoB2B/resources/fixtures/massa_dados_PRD.json&lt;/a&gt;'.</msg>
+<msg time="2024-10-18T15:12:28.187045" level="INFO">${arquivo} = {
+    "tc1":{
+        "nome":                 "Marlene",
+        "sobrenome":            "Silva",
+        "nome_completo":        "Mauro Alves",
+        "senha":                "nunc@123",
+        "co...</msg>
+<var>${arquivo}</var>
+<arg>${EXECDIR}/resources/fixtures/${nome_arquivo}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.186643" elapsed="0.000432"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-18T15:12:28.187616" level="INFO">${super_var} = {'tc1': {'nome': 'Marlene', 'sobrenome': 'Silva', 'nome_completo': 'Mauro Alves', 'senha': 'nunc@123', 'confirmarSenha': 'nunc@123', 'cpf': '106.798.360-04', 'telefone': '(12)992655545', 'cep': '12052...</msg>
+<var>${super_var}</var>
+<arg>json.loads($arquivo)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.187199" elapsed="0.000450"/>
+</kw>
+<return>
+<value>${super_var}</value>
+<status status="PASS" start="2024-10-18T15:12:28.187718" elapsed="0.000060"/>
+</return>
+<msg time="2024-10-18T15:12:28.187976" level="INFO">${dados} = {'tc1': {'nome': 'Marlene', 'sobrenome': 'Silva', 'nome_completo': 'Mauro Alves', 'senha': 'nunc@123', 'confirmarSenha': 'nunc@123', 'cpf': '106.798.360-04', 'telefone': '(12)992655545', 'cep': '12052...</msg>
+<var>${dados}</var>
+<arg>massa_dados_PRD.json</arg>
+<status status="PASS" start="2024-10-18T15:12:28.186337" elapsed="0.001676"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Acessar a categoria" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:28.205381" level="INFO">Waited for Element with selector id=Catalogo at state visible</msg>
+<arg>${dropdown_catalago}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.191386" elapsed="0.014160"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2024-10-18T15:12:28.304752" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${dropdown_catalago}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.205748" elapsed="0.111973"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:28.318402" level="INFO">Clicks the element 'css=li[class='list-item list-item-nivel'] &gt;&gt; text='Família''.</msg>
+<arg>css=li[class='list-item list-item-nivel'] &gt;&gt; text='${categoria}'</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.317922" elapsed="0.199866"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:29.334272" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state hidden</msg>
+<arg>${Product_Card}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:28.518035" elapsed="0.816373"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:30.855866" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state visible</msg>
+<arg>${Product_Card}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:29.334610" elapsed="1.521440"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:30.863703" level="INFO">Waited for Element with selector xpath=(//div[@class='button-add-cart']) [1] at state visible</msg>
+<arg>${Button_Adicionar_PLP} [1]</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:30.856255" elapsed="0.007589"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-10-18T15:12:30.868574" level="INFO">Title: 'Família'</msg>
+<arg>==</arg>
+<arg>${categoria}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-10-18T15:12:30.864083" elapsed="0.004596"/>
+</kw>
+<arg>${categoria["categoria"]}</arg>
+<status status="PASS" start="2024-10-18T15:12:28.189672" elapsed="2.679186"/>
+</kw>
+<kw name="Adicionar produto no carrinho" owner="actions_PRD">
+<if>
+<branch type="IF" condition="'${Compra}' == 'PDP'">
+<kw name="Click" owner="Browser">
+<arg>${Button_Adiconar_PDP}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2024-10-18T15:12:30.869623" elapsed="0.000037"/>
+</kw>
+<status status="NOT RUN" start="2024-10-18T15:12:30.869407" elapsed="0.000305"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:30.870269" level="INFO">Clicks the element 'xpath=(//div[@class='button-add-cart']) [1]'.</msg>
+<arg>${Button_Adicionar_PLP} [${Posicao}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:30.869863" elapsed="0.084979"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:30.869757" elapsed="0.085173"/>
+</branch>
+<status status="PASS" start="2024-10-18T15:12:30.869381" elapsed="0.085599"/>
+</if>
+<kw name="Aguardar loader" owner="actions_PRD">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:35.962428" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2024-10-18T15:12:30.955723" elapsed="5.008752">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-10-18T15:12:30.955532" elapsed="5.009050"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:35.972058" level="INFO">Waited for Element with selector css=.logo_iguana at state hidden</msg>
+<arg>${Loader}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:35.964736" elapsed="0.007465"/>
+</kw>
+<arg>${Loader_Galapagos}</arg>
+<status status="PASS" start="2024-10-18T15:12:30.955204" elapsed="5.017102"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:35.980622" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state visible</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:35.972472" elapsed="0.008278"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:35.981407" level="INFO">Clicks the element 'css=.galapagos-minicart-header .close-icon'.</msg>
+<arg>${Button_Close_MiniCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:35.980923" elapsed="0.047051"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:36.036859" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state hidden</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.028230" elapsed="0.008818"/>
+</kw>
+<arg>PLP</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-18T15:12:30.869125" elapsed="5.168041"/>
+</kw>
+<var name="${categoria}">{'categoria': 'Família'}</var>
+<status status="PASS" start="2024-10-18T15:12:28.189493" elapsed="7.847729"/>
+</iter>
+<iter>
+<kw name="Acessar a categoria" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:36.049066" level="INFO">Waited for Element with selector id=Catalogo at state visible</msg>
+<arg>${dropdown_catalago}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.039636" elapsed="0.009657"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2024-10-18T15:12:36.079712" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${dropdown_catalago}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.049613" elapsed="0.036867"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:36.087199" level="INFO">Clicks the element 'css=li[class='list-item list-item-nivel'] &gt;&gt; text='Viva Aventuras''.</msg>
+<arg>css=li[class='list-item list-item-nivel'] &gt;&gt; text='${categoria}'</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.086697" elapsed="0.113572"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:36.735388" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state hidden</msg>
+<arg>${Product_Card}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.200497" elapsed="0.535092"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:38.096459" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state visible</msg>
+<arg>${Product_Card}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:36.735797" elapsed="1.360807"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:38.258444" level="INFO">Waited for Element with selector xpath=(//div[@class='button-add-cart']) [1] at state visible</msg>
+<arg>${Button_Adicionar_PLP} [1]</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:38.096821" elapsed="0.161763"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-10-18T15:12:38.278598" level="INFO">Title: 'Viva Aventuras'</msg>
+<arg>==</arg>
+<arg>${categoria}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-10-18T15:12:38.258780" elapsed="0.019923"/>
+</kw>
+<arg>${categoria["categoria"]}</arg>
+<status status="PASS" start="2024-10-18T15:12:36.037598" elapsed="2.241213"/>
+</kw>
+<kw name="Adicionar produto no carrinho" owner="actions_PRD">
+<if>
+<branch type="IF" condition="'${Compra}' == 'PDP'">
+<kw name="Click" owner="Browser">
+<arg>${Button_Adiconar_PDP}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2024-10-18T15:12:38.279995" elapsed="0.000062"/>
+</kw>
+<status status="NOT RUN" start="2024-10-18T15:12:38.279477" elapsed="0.000665"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:38.280861" level="INFO">Clicks the element 'xpath=(//div[@class='button-add-cart']) [1]'.</msg>
+<arg>${Button_Adicionar_PLP} [${Posicao}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:38.280328" elapsed="0.151965"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:38.280193" elapsed="0.152277"/>
+</branch>
+<status status="PASS" start="2024-10-18T15:12:38.279450" elapsed="0.153089"/>
+</if>
+<kw name="Aguardar loader" owner="actions_PRD">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:43.439376" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2024-10-18T15:12:38.433402" elapsed="5.006715">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-10-18T15:12:38.433167" elapsed="5.007071"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:43.447375" level="INFO">Waited for Element with selector css=.logo_iguana at state hidden</msg>
+<arg>${Loader}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.440385" elapsed="0.007148"/>
+</kw>
+<arg>${Loader_Galapagos}</arg>
+<status status="PASS" start="2024-10-18T15:12:38.432759" elapsed="5.014885"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:43.454930" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state visible</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.447791" elapsed="0.007327"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:43.455729" level="INFO">Clicks the element 'css=.galapagos-minicart-header .close-icon'.</msg>
+<arg>${Button_Close_MiniCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.455298" elapsed="0.035230"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:43.498916" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state hidden</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.490762" elapsed="0.008336"/>
+</kw>
+<arg>PLP</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-18T15:12:38.279140" elapsed="5.220067"/>
+</kw>
+<var name="${categoria}">{'categoria': 'Viva Aventuras'}</var>
+<status status="PASS" start="2024-10-18T15:12:36.037408" elapsed="7.461857"/>
+</iter>
+<iter>
+<kw name="Acessar a categoria" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:43.510234" level="INFO">Waited for Element with selector id=Catalogo at state visible</msg>
+<arg>${dropdown_catalago}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.501568" elapsed="0.008894"/>
+</kw>
+<kw name="Mouse Move Relative To" owner="Browser">
+<msg time="2024-10-18T15:12:43.527036" level="INFO">Moving mouse relative to element center by x: 0.0, y: 0.0 coordinates.</msg>
+<arg>${dropdown_catalago}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Moves the mouse cursor relative to the selected element.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.510684" elapsed="0.029849"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:43.541311" level="INFO">Clicks the element 'css=li[class='list-item list-item-nivel'] &gt;&gt; text='Torcida fanática''.</msg>
+<arg>css=li[class='list-item list-item-nivel'] &gt;&gt; text='${categoria}'</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.540804" elapsed="0.110659"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:44.179052" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state hidden</msg>
+<arg>${Product_Card}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:43.651736" elapsed="0.527491"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:45.517069" level="INFO">Waited for Element with selector xpath=(//img[@class='img-responsive product-cover-image'])[1] at state visible</msg>
+<arg>${Product_Card}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:44.179472" elapsed="1.337745"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:45.523362" level="INFO">Waited for Element with selector xpath=(//div[@class='button-add-cart']) [1] at state visible</msg>
+<arg>${Button_Adicionar_PLP} [1]</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:45.517403" elapsed="0.006116"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-10-18T15:12:45.527456" level="INFO">Title: 'Torcida fanática'</msg>
+<arg>==</arg>
+<arg>${categoria}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-10-18T15:12:45.523703" elapsed="0.003858"/>
+</kw>
+<arg>${categoria["categoria"]}</arg>
+<status status="PASS" start="2024-10-18T15:12:43.499587" elapsed="2.028141"/>
+</kw>
+<kw name="Adicionar produto no carrinho" owner="actions_PRD">
+<if>
+<branch type="IF" condition="'${Compra}' == 'PDP'">
+<kw name="Click" owner="Browser">
+<arg>${Button_Adiconar_PDP}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2024-10-18T15:12:45.528639" elapsed="0.000041"/>
+</kw>
+<status status="NOT RUN" start="2024-10-18T15:12:45.528363" elapsed="0.000380"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:45.529657" level="INFO">Clicks the element 'xpath=(//div[@class='button-add-cart']) [1]'.</msg>
+<arg>${Button_Adicionar_PLP} [${Posicao}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:45.529051" elapsed="0.091549"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:45.528877" elapsed="0.091816"/>
+</branch>
+<status status="PASS" start="2024-10-18T15:12:45.528339" elapsed="0.092406"/>
+</if>
+<kw name="Aguardar loader" owner="actions_PRD">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:50.626199" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2024-10-18T15:12:45.621479" elapsed="5.005447">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  [2m- waiting for locator('.logo_iguana') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>${Loader}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-10-18T15:12:45.621295" elapsed="5.005746"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:50.633523" level="INFO">Waited for Element with selector css=.logo_iguana at state hidden</msg>
+<arg>${Loader}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.627197" elapsed="0.006475"/>
+</kw>
+<arg>${Loader_Galapagos}</arg>
+<status status="PASS" start="2024-10-18T15:12:45.620914" elapsed="5.012867"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:50.640439" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state visible</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>visible</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.633930" elapsed="0.006652"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-10-18T15:12:50.641246" level="INFO">Clicks the element 'css=.galapagos-minicart-header .close-icon'.</msg>
+<arg>${Button_Close_MiniCart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.640761" elapsed="0.035798"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-10-18T15:12:50.683758" level="INFO">Waited for Element with selector css=.open .galapagos-minicart-header at state hidden</msg>
+<arg>${MiniCart_Open}</arg>
+<arg>hidden</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.676776" elapsed="0.007123"/>
+</kw>
+<arg>PLP</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-18T15:12:45.528026" elapsed="5.156034"/>
+</kw>
+<var name="${categoria}">{'categoria': 'Torcida fanática'}</var>
+<status status="PASS" start="2024-10-18T15:12:43.499420" elapsed="7.184703"/>
+</iter>
+<var>${categoria}</var>
+<value>@{dados["tc1"]["categorias"]}</value>
+<status status="PASS" start="2024-10-18T15:12:28.188123" elapsed="22.496061"/>
+</for>
+<kw name="Encerrar teste" owner="base_PRD" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Take Screenshot</arg>
+<arg>embed</arg>
+<arg>fullPage=True</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.684799" elapsed="0.000115"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-10-18T15:12:50.862171" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-18T15:12:50.685086" elapsed="0.177264"/>
+</kw>
+<status status="PASS" start="2024-10-18T15:12:50.684515" elapsed="0.177949"/>
+</kw>
+<tag>001- Realizar compra via página de categoria, com novo usuário no checkout e pagamentos via cartão</tag>
+<status status="PASS" start="2024-10-18T15:12:22.933713" elapsed="27.928856"/>
+</test>
+<status status="PASS" start="2024-10-18T15:12:22.450125" elapsed="28.417781"/>
+</suite>
+<status status="PASS" start="2024-10-18T15:12:22.426389" elapsed="28.446544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">001- Realizar compra via página de categoria, com novo usuário no checkout e pagamentos via cartão</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="regressao PRD">Tests.regressao PRD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

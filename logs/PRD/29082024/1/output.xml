@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.12 on linux)" generated="2024-08-29T16:04:51.804338" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/wesley/Documentos/Automações/OceanoB2B/tests">
+<suite id="s1-s1" name="regressao PRD" source="/home/wesley/Documentos/Automações/OceanoB2B/tests/regressao_PRD.robot">
+<test id="s1-s1-t1" name="1" line="7">
+<kw name="Acessar o site" owner="base_PRD" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-08-29T16:04:52.332455" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/wesley/Documentos/Automa\u00e7\u00f5es/OceanoB2B/logs/PRD/29082024/1/browser/traces/655643ab-5521-41ac-a0bf-436f2daaabbd"}</msg>
+<msg time="2024-08-29T16:04:52.819677" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/wesley/Documentos/Automações/OceanoB2B/logs/PRD/29082024/1/browser/traces/655643ab-5521-41ac-a0bf-436f2daaabbd"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-08-29T16:04:52.331588" elapsed="0.488259"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2024-08-29T16:04:52.820998" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  }
+}</msg>
+<msg time="2024-08-29T16:04:52.835982" level="INFO">Successfully created context. </msg>
+<msg time="2024-08-29T16:04:52.836058" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1366, 'height': 768}}</msg>
+<arg>viewport={'width':1366, 'height':768}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-08-29T16:04:52.820087" elapsed="0.016065"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-08-29T16:04:57.565456" level="INFO">Successfully initialized new page object and opened url: https://www.oceanob2b.com/</msg>
+<arg>url=${HOME_PAGE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-08-29T16:04:52.836439" elapsed="4.729249"/>
+</kw>
+<status status="PASS" start="2024-08-29T16:04:52.330703" elapsed="5.235148"/>
+</kw>
+<kw name="Get JSON" owner="base_PRD">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-08-29T16:04:57.567004" level="INFO" html="true">Getting file '&lt;a href="file:///home/wesley/Documentos/Automações/OceanoB2B/resources/fixtures/massa_dados_PRD.json"&gt;/home/wesley/Documentos/Automações/OceanoB2B/resources/fixtures/massa_dados_PRD.json&lt;/a&gt;'.</msg>
+<msg time="2024-08-29T16:04:57.567457" level="INFO">${arquivo} = {
+    "tc1":{
+        "produtos":[
+            {"produto": "Cadeira"},  
+            {"produto": "Cafeteira"},  
+            {"produto": "Ventilador"}
+        ]       
+    }
+}</msg>
+<var>${arquivo}</var>
+<arg>${EXECDIR}/resources/fixtures/${nome_arquivo}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-08-29T16:04:57.566691" elapsed="0.000902"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-29T16:04:57.573596" level="INFO">${super_var} = {'tc1': {'produtos': [{'produto': 'Cadeira'}, {'produto': 'Cafeteira'}, {'produto': 'Ventilador'}]}}</msg>
+<var>${super_var}</var>
+<arg>json.loads($arquivo)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-29T16:04:57.568858" elapsed="0.004801"/>
+</kw>
+<return>
+<value>${super_var}</value>
+<status status="PASS" start="2024-08-29T16:04:57.573829" elapsed="0.000090"/>
+</return>
+<msg time="2024-08-29T16:04:57.574168" level="INFO">${dados} = {'tc1': {'produtos': [{'produto': 'Cadeira'}, {'produto': 'Cafeteira'}, {'produto': 'Ventilador'}]}}</msg>
+<var>${dados}</var>
+<arg>massa_dados_PRD.json</arg>
+<status status="PASS" start="2024-08-29T16:04:57.566248" elapsed="0.007970"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Busca no search" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:04:57.727362" level="INFO">Waited for Element with selector css=.search at state visible</msg>
+<arg>${Input_Search}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:04:57.576141" elapsed="0.151377"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-08-29T16:04:57.728381" level="INFO">Types the text 'Cadeira' in the given field.</msg>
+<arg>${Input_Search}</arg>
+<arg>${produto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:04:57.727769" elapsed="0.313237"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:04:59.666512" level="INFO">Waited for Element with selector css=.products-busca li:first-of-type at state visible</msg>
+<arg>css=.products-busca li:first-of-type</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:04:58.041296" elapsed="1.625441"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-29T16:04:59.667782" level="INFO">Clicks the element 'css=.search + button'.</msg>
+<arg>${Button_Search}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:04:59.667077" elapsed="0.747202"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:01.297405" level="INFO">Waited for Element with selector css=.titulo-categoria-nome h1 &gt;&gt; text='Cadeira' at state visible</msg>
+<arg>css=.titulo-categoria-nome h1 &gt;&gt; text='${produto}'</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:00.414637" elapsed="0.882949"/>
+</kw>
+<arg>${produto["produto"]}</arg>
+<status status="PASS" start="2024-08-29T16:04:57.575292" elapsed="3.722457"/>
+</kw>
+<var name="${produto}">{'produto': 'Cadeira'}</var>
+<status status="PASS" start="2024-08-29T16:04:57.575041" elapsed="3.722785"/>
+</iter>
+<iter>
+<kw name="Busca no search" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:01.394153" level="INFO">Waited for Element with selector css=.search at state visible</msg>
+<arg>${Input_Search}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:01.299292" elapsed="0.095046"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-08-29T16:05:01.395293" level="INFO">Types the text 'Cafeteira' in the given field.</msg>
+<arg>${Input_Search}</arg>
+<arg>${produto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:05:01.394613" elapsed="0.093737"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:03.426266" level="INFO">Waited for Element with selector css=.products-busca li:first-of-type at state visible</msg>
+<arg>css=.products-busca li:first-of-type</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:01.488689" elapsed="1.937856"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-29T16:05:03.428112" level="INFO">Clicks the element 'css=.search + button'.</msg>
+<arg>${Button_Search}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:05:03.426870" elapsed="2.539391"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:06.272706" level="INFO">Waited for Element with selector css=.titulo-categoria-nome h1 &gt;&gt; text='Cafeteira' at state visible</msg>
+<arg>css=.titulo-categoria-nome h1 &gt;&gt; text='${produto}'</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:05.966555" elapsed="0.306379"/>
+</kw>
+<arg>${produto["produto"]}</arg>
+<status status="PASS" start="2024-08-29T16:05:01.298334" elapsed="4.974805"/>
+</kw>
+<var name="${produto}">{'produto': 'Cafeteira'}</var>
+<status status="PASS" start="2024-08-29T16:05:01.298023" elapsed="4.975253"/>
+</iter>
+<iter>
+<kw name="Busca no search" owner="actions_PRD">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:06.397878" level="INFO">Waited for Element with selector css=.search at state visible</msg>
+<arg>${Input_Search}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:06.281813" elapsed="0.116325"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-08-29T16:05:06.399266" level="INFO">Types the text 'Ventilador' in the given field.</msg>
+<arg>${Input_Search}</arg>
+<arg>${produto}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:05:06.398498" elapsed="0.090958"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:07.970852" level="INFO">Waited for Element with selector css=.products-busca li:first-of-type at state visible</msg>
+<arg>css=.products-busca li:first-of-type</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:06.489723" elapsed="1.481303"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-29T16:05:07.971878" level="INFO">Clicks the element 'css=.search + button'.</msg>
+<arg>${Button_Search}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-29T16:05:07.971321" elapsed="0.706107"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-08-29T16:05:09.019799" level="INFO">Waited for Element with selector css=.titulo-categoria-nome h1 &gt;&gt; text='Ventilador' at state visible</msg>
+<arg>css=.titulo-categoria-nome h1 &gt;&gt; text='${produto}'</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-08-29T16:05:08.677753" elapsed="0.342247"/>
+</kw>
+<arg>${produto["produto"]}</arg>
+<status status="PASS" start="2024-08-29T16:05:06.273798" elapsed="2.746353"/>
+</kw>
+<var name="${produto}">{'produto': 'Ventilador'}</var>
+<status status="PASS" start="2024-08-29T16:05:06.273469" elapsed="2.746784"/>
+</iter>
+<var>${produto}</var>
+<value>@{dados["tc1"]["produtos"]}</value>
+<status status="PASS" start="2024-08-29T16:04:57.574406" elapsed="11.445922"/>
+</for>
+<kw name="Encerrar teste" owner="base_PRD" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Take Screenshot</arg>
+<arg>embed</arg>
+<arg>fullPage=True</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-08-29T16:05:09.021368" elapsed="0.000136"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-08-29T16:05:09.235626" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-29T16:05:09.021654" elapsed="0.214104"/>
+</kw>
+<status status="PASS" start="2024-08-29T16:05:09.020902" elapsed="0.214981"/>
+</kw>
+<tag>001- Realizar compra via página de categoria, com novo usuário no checkout e pagamentos via cartão(compra não finalizada)</tag>
+<status status="PASS" start="2024-08-29T16:04:52.327296" elapsed="16.908734"/>
+</test>
+<doc>Esta suite de testes tem como objetivo, validar que o site está vendendo.</doc>
+<status status="PASS" start="2024-08-29T16:04:51.828189" elapsed="17.415367"/>
+</suite>
+<status status="PASS" start="2024-08-29T16:04:51.805600" elapsed="17.444910"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">001- Realizar compra via página de categoria, com novo usuário no checkout e pagamentos via cartão(compra não finalizada)</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="regressao PRD">Tests.regressao PRD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

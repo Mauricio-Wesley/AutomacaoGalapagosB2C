@@ -1,0 +1,101 @@
+{"level":30,"time":"2024-08-29T19:04:52.290Z","pid":19494,"hostname":"wesley","msg":"Listening on 56885"}
+(node:19494) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-08-29T19:04:52.325Z","pid":19494,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:04:52.325Z","pid":19494,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:04:52.329Z","pid":19494,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:04:52.329Z","pid":19494,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:04:52.335Z","pid":19494,"hostname":"wesley","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-08-29T19:04:52.817Z","pid":19494,"hostname":"wesley","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
+{"level":30,"time":"2024-08-29T19:04:52.818Z","pid":19494,"hostname":"wesley","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-08-29T19:04:52.818Z","pid":19494,"hostname":"wesley","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-08-29T19:04:52.823Z","pid":19494,"hostname":"wesley","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-08-29T19:04:52.823Z","pid":19494,"hostname":"wesley","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-08-29T19:04:52.823Z","pid":19494,"hostname":"wesley","msg":"Trace file: "}
+{"level":30,"time":"2024-08-29T19:04:52.833Z","pid":19494,"hostname":"wesley","msg":"Changed active context"}
+{"level":30,"time":"2024-08-29T19:04:52.834Z","pid":19494,"hostname":"wesley","msg":"End of node method newContext"}
+{"level":30,"time":"2024-08-29T19:04:52.839Z","pid":19494,"hostname":"wesley","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-08-29T19:04:52.839Z","pid":19494,"hostname":"wesley","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-08-29T19:04:53.069Z","pid":19494,"hostname":"wesley","msg":"Video path: undefined"}
+{"level":30,"time":"2024-08-29T19:04:53.069Z","pid":19494,"hostname":"wesley","msg":"Changed active page"}
+{"level":30,"time":"2024-08-29T19:04:57.559Z","pid":19494,"hostname":"wesley","msg":"End of node method newPage"}
+{"level":30,"time":"2024-08-29T19:04:57.579Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:04:57.580Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:04:57.726Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:04:57.730Z","pid":19494,"hostname":"wesley","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-08-29T19:04:57.730Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:04:58.039Z","pid":19494,"hostname":"wesley","msg":"End of node method typeText"}
+{"level":30,"time":"2024-08-29T19:04:58.044Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:04:58.044Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.products-busca li:first-of-type in page."}
+{"level":30,"time":"2024-08-29T19:04:59.664Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:04:59.669Z","pid":19494,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-08-29T19:04:59.670Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search + button in page."}
+{"level":30,"time":"2024-08-29T19:05:00.412Z","pid":19494,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-08-29T19:05:00.416Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:00.417Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.titulo-categoria-nome h1 >> text='Cadeira' in page."}
+{"level":30,"time":"2024-08-29T19:05:01.296Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:01.302Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:01.302Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:05:01.390Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:01.396Z","pid":19494,"hostname":"wesley","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-08-29T19:05:01.396Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:05:01.487Z","pid":19494,"hostname":"wesley","msg":"End of node method typeText"}
+{"level":30,"time":"2024-08-29T19:05:01.491Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:01.491Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.products-busca li:first-of-type in page."}
+{"level":30,"time":"2024-08-29T19:05:03.425Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:03.429Z","pid":19494,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-08-29T19:05:03.429Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search + button in page."}
+{"level":30,"time":"2024-08-29T19:05:05.964Z","pid":19494,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-08-29T19:05:05.969Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:05.969Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.titulo-categoria-nome h1 >> text='Cafeteira' in page."}
+{"level":30,"time":"2024-08-29T19:05:06.271Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:06.285Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:06.285Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:05:06.396Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:06.402Z","pid":19494,"hostname":"wesley","msg":"Start of node method typeText"}
+{"level":30,"time":"2024-08-29T19:05:06.402Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search in page."}
+{"level":30,"time":"2024-08-29T19:05:06.488Z","pid":19494,"hostname":"wesley","msg":"End of node method typeText"}
+{"level":30,"time":"2024-08-29T19:05:06.492Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:06.492Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.products-busca li:first-of-type in page."}
+{"level":30,"time":"2024-08-29T19:05:07.969Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:07.973Z","pid":19494,"hostname":"wesley","msg":"Start of node method click"}
+{"level":30,"time":"2024-08-29T19:05:07.973Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.search + button in page."}
+{"level":30,"time":"2024-08-29T19:05:08.676Z","pid":19494,"hostname":"wesley","msg":"End of node method click"}
+{"level":30,"time":"2024-08-29T19:05:08.681Z","pid":19494,"hostname":"wesley","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:08.681Z","pid":19494,"hostname":"wesley","msg":"Strict mode is enabled, find Locator with css=.titulo-categoria-nome h1 >> text='Ventilador' in page."}
+{"level":30,"time":"2024-08-29T19:05:09.019Z","pid":19494,"hostname":"wesley","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2024-08-29T19:05:09.023Z","pid":19494,"hostname":"wesley","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-08-29T19:05:09.056Z","pid":19494,"hostname":"wesley","msg":"Removed page=9374a778-9959-4fd6-8b28-b056391ae4b6 from context=26a08be5-4d0f-4efb-9d46-220b40ef1474 page stack"}
+{"level":30,"time":"2024-08-29T19:05:09.234Z","pid":19494,"hostname":"wesley","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10678:59)
+    at PlaywrightServer.setTimeout (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10915:57)
+    at Object.onReceiveHalfClose (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-08-29T19:05:09.241Z","pid":19494,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:05:09.241Z","pid":19494,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10678:59)
+    at PlaywrightServer.setTimeout (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10915:57)
+    at Object.onReceiveHalfClose (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (/home/wesley/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-08-29T19:05:09.247Z","pid":19494,"hostname":"wesley","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:05:09.248Z","pid":19494,"hostname":"wesley","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-08-29T19:05:09.277Z","pid":19494,"hostname":"wesley","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-08-29T19:05:09.278Z","pid":19494,"hostname":"wesley","msg":"End of node method closeAllBrowsers"}
