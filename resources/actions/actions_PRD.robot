@@ -55,18 +55,7 @@ Cadastro novo usuário
     Click                                        ${Checkbox_Accept_Terms}
     Wait For Elements State                      ${Text_Account_Created}                           visible
     Click                                        ${Button_Go_Home}
-Ir para entrega
-    Wait For Elements State                      ${button_ir_para_entrega}                         visible                       ${DEFAULT_TIMEOUT}
-    Aguardar loader                              ${Loader}
-    Click                                        ${button_ir_para_entrega}
-    Wait For Elements State                      xpath=//input[@name="firstName"]                  hidden                        ${DEFAULT_TIMEOUT}
-Selecionar endereço existente
-    [Arguments]                                  ${posicao}
-    Wait For Elements State                      ${Button_Enviar_Este_Endereco}                    visible                       ${DEFAULT_TIMEOUT}
-    ${CEP_Lista}                                 Get Text    css=div[class="modal-content"] span[data-bind="text: postalCode"]
-    Click                                        ${Button_Enviar_Este_Endereco}
-    Aguardar loader                              ${Loader}
-    Get Text                                     id=CC-checkoutAddressBook-szipcode    ==    ${CEP_Lista}
+    Wait For Elements State                      css=${Container_Carrossel_Home}, ${Title_Checkout}                              visible
 Cadastrar novo endereço
     [Arguments]                                  ${dados}
     Wait For Elements State                      ${input_cep}                                      visible                       ${DEFAULT_TIMEOUT}
@@ -110,14 +99,8 @@ Acessar página de login
     Click                                        ${Button_Entrar_Cadastrar}
     Wait For Elements State                      ${Input_Email}                                    visible                       ${DEFAULT_TIMEOUT}
 Acessar PDP
-    ${Vrf_Cart}                                  Get Element Count                                 ${Title_Cart}
-    IF  ${Vrf_Cart} > 0
-        Wait For Elements State                  ${img_produto_cart}                               visible                       ${DEFAULT_TIMEOUT}
-        Click                                    ${img_produto_cart}
-    ELSE
-        Wait For Elements State                  ${Product_Box} [1]                                visible                       ${DEFAULT_TIMEOUT}
-        Click                                    ${Product_Box} [1]
-    END
+    Wait For Elements State                      ${Product_Box} [1]                                visible                       ${DEFAULT_TIMEOUT}
+    Click                                        ${Product_Box} [1]
     Wait For Elements State                      ${Text_Titulo_PDP}                                visible                       ${DEFAULT_TIMEOUT}
 Busca no search
     [Arguments]                                  ${produto}
@@ -128,18 +111,15 @@ Busca no search
     Wait For Elements State                      ${Breadcrumb}${produto}'                          visible                      ${DEFAULT_TIMEOUT}
     Wait For Elements State                      ${Button_Adicionar_PLP} [1]                       visible                      ${DEFAULT_TIMEOUT}
 Limpar MiniCart
-    ${Verifica_Itens}  Run Keyword And Return Status  Wait For Elements State                      ${itens_cart}                 visible  5
-    IF  '${Verifica_Itens}' == 'True'
+    ${Itens_Cart}  Run Keyword And Return Status  Wait For Elements State                          ${itens_cart}                 visible  5
+    IF  '${Itens_Cart}' == 'True'
       Click                                      ${Button_Minicart}
       Wait For Elements State                    ${MiniCart_Open}                                  visible                       ${DEFAULT_TIMEOUT}
-    #   ${Get_Quantidade}                          Get Element Count                                 ${Button_Trash_MiniCart}
-      FOR  ${i}  IN RANGE                        20
+      ${Get_Quantity}                            Get Element Count                                 ${Button_Trash_MiniCart}
+      FOR  ${i}  IN RANGE                        ${Get_Quantity}
         Click                                    ${Button_Trash_MiniCart} [1]
         Click                                    ${Button_Delete_MiniCart}
         Wait For Elements State                  ${Button_Delete_MiniCart}                         hidden                        ${DEFAULT_TIMEOUT}
-        Sleep                                    2
-        ${Get_Quantidade_MiniCart}               Get Element Count                                 ${Button_Trash_MiniCart}
-        Exit For Loop If                         ${Get_Quantidade_MiniCart} == 0
       END
       Wait For Elements State                    ${Text_Empty_MiniCart}
       Click                                      ${Button_Close_MiniCart}

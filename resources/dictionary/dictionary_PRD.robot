@@ -4,7 +4,6 @@ Resource                                                        ../base_PRD.robo
 ${Input_Email}                                                  input[id=email]
 ${Title_Cart}                                                   css=h2 >> text='Baú de itens'       
 ${Button_Finalizar_Pedido}                                      id=CC-orderSummary-checkout
-${button_ir_para_entrega}                                       id=delivery
 ${input_nome}                                                   id=CC-checkoutAddressBook-sfirstname                
 ${input_sobrenome}                                              id=CC-checkoutAddressBook-slastname                      
 ${input_cep}                                                    id=CC-checkoutAddressBook-szipcode                       

@@ -13,7 +13,6 @@ Test Teardown                                    Encerrar teste
     Acessar página do carrinho
     Acessar página do checkout
     Cadastro novo usuário                        ${dados["tc1"]}
-    Ir para entrega
     Cadastrar novo endereço                      ${dados["tc1"]}
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc1"]}
@@ -60,7 +59,6 @@ Test Teardown                                    Encerrar teste
     END
     Acessar página do carrinho
     Acessar página do checkout
-    Ir para entrega
     Cadastrar novo endereço                      ${dados["tc4"]}
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc4"]}
@@ -76,7 +74,6 @@ Test Teardown                                    Encerrar teste
     END
     Acessar página do carrinho
     Acessar página do checkout
-    Ir para entrega
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc5"]}
 6
@@ -90,6 +87,5 @@ Test Teardown                                    Encerrar teste
     Acessar página do carrinho
     Acessar página do checkout
     Login com usuário existente                  ${dados["tc6"]}                         Checkout
-    Ir para entrega
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc6"]}
