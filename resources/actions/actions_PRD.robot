@@ -53,6 +53,7 @@ Cadastrar novo usuário
     Type Text                                    ${Input_Create_Password}                          ${dados["password"]}          5ms
     Type Text                                    ${Input_Confirm_Password}                         ${dados["password"]}          5ms
     Click                                        ${Checkbox_Accept_Terms}
+    Click                                        ${Button_Create_Account}
     Wait For Elements State                      ${Text_Account_Created}                           visible
     Click                                        ${Button_Go_Home}
     Wait For Elements State                      css=${Container_Carrossel_Home}, ${Title_Checkout}                              visible

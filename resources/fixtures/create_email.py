@@ -8,6 +8,6 @@ def gera_letras(size=6, chars=string.ascii_lowercase + string.digits):
 letras = gera_letras()
 
 def createEmail():
-    print(str(random.randint(0,99999999)) + letras + "@jbqa.com")
+    print(str(random.randint(0,99999999)) + letras + "@123.com")
 
 createEmail()

@@ -12,7 +12,7 @@ Test Teardown                                    Encerrar teste
     END
     Acessar página do carrinho
     Acessar página do checkout
-    Cadastrar novo usuário                        ${dados["tc1"]}
+    Cadastrar novo usuário                       ${dados["tc1"]}
     Cadastrar novo endereço                      ${dados["tc1"]}
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc1"]}
@@ -47,7 +47,7 @@ Test Teardown                                    Encerrar teste
     [Tags]                                       004- Realizar compra via página de busca e categorias, com novo usuário no início e pagamento via PIX
     ${dados}                                     Get JSON                                          massa_dados_PRD.json
     Acessar página de login
-    Cadastrar novo usuário                        ${dados["tc4"]}
+    Cadastrar novo usuário                       ${dados["tc4"]}
     Aceitar cookies
     FOR  ${categoria}  IN                        @{dados["tc4"]["categorias"]}
       Acessar a categoria                        ${categoria["categoria"]}
