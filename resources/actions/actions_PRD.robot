@@ -4,7 +4,7 @@ Resource                                         ../base_PRD.robot
 *** Keywords ***
 Aguardar loader
     [Arguments]                                  ${Loader}
-    Run Keyword And Ignore Error                 Wait For Elements State                           ${Loader}                     visible  5
+    Run Keyword And Ignore Error                 Wait For Elements State                           ${Loader}                     visible  3
     Wait For Elements State                      ${Loader}                                         hidden                        ${DEFAULT_TIMEOUT}
 Aceitar cookies
     Wait For Elements State                      ${Button_Accept_Cookies}                          visible                       ${DEFAULT_TIMEOUT}
@@ -39,7 +39,7 @@ Acessar página do checkout
     Wait For Elements State                      ${Button_Finalizar_Pedido}                        enabled                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_Finalizar_Pedido}
     Wait For Elements State                      css=${Input_Email}, ${Title_Checkout}             visible                       ${DEFAULT_TIMEOUT}
-Cadastro novo usuário
+Cadastrar novo usuário
     [Arguments]                                  ${dados}
     ${email}                                     Run Process                                       python                        ${EXECDIR}/resources/fixtures/create_email.py
     ${cpf}                                       Run Process                                       python                        ${EXECDIR}/resources/fixtures/create_cpf.py
@@ -63,7 +63,7 @@ Cadastrar novo endereço
     Type Text                                    ${input_numero_da_casa}                           254                           5ms
     Click                                        ${input_complemento} 
     Type Text                                    ${input_complemento}                              ${dados["fullname"]}          5ms
-    Type Text                                    ${input_numero}                                   ${dados["telephone"]}          5ms
+    Type Text                                    ${input_numero}                                   ${dados["telephone"]}         5ms
     Aguardar loader                              ${Loader}
 Selecionar pagamento
     [Arguments]                                  ${dados}
@@ -73,8 +73,8 @@ Selecionar pagamento
         Type Text                                ${Input_Card_Name}                                ${dados["fullname"]}          5ms
         Type Text                                ${Input_Card_Validity}                            0526                          5ms
         Type Text                                ${Input_CVV}                                      123                           5ms
-        Click                                    ${Select_Select_Installment}
-        Click                                    xpath=(//div[@id='cinstallments']//div) [4]
+        Click                                    ${Select_Installment}
+        Click                                    ${Option_Installment}${dados["installment"]}")]
     END
     IF  "${dados["payment"]}" == "Boleto"
         Click                                    ${Opt_Boleto}
@@ -85,8 +85,7 @@ Selecionar pagamento
 Ir para pagamento
     Wait For Elements State                      ${Button_proceed_To_Paymen}                       visible                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_proceed_To_Paymen}
-    Aguardar loader                              ${Loader}
-Login com usuário existente
+Logar com usuário existente
     [Arguments]                                  ${dados}                                          ${pagina}
     Type Text                                    ${Input_Email}                                    ${dados["email"]}             50ms
     Wait For Elements State                      ${Button_Continue_Login}
@@ -94,6 +93,7 @@ Login com usuário existente
     Type Text                                    ${Input_Password}                                 ${dados["password"]}          50ms
     Click                                        ${Button_Login_In}
     Wait For Elements State                      css=${Container_Carrossel_Home}, ${Title_Checkout}                              visible                   
+    Aguardar loader                              ${Loader}
 Acessar página de login
     Wait For Elements State                      ${Button_Entrar_Cadastrar}                        visible                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_Entrar_Cadastrar}
@@ -111,7 +111,7 @@ Busca no search
     Wait For Elements State                      ${Breadcrumb}${produto}'                          visible                      ${DEFAULT_TIMEOUT}
     Wait For Elements State                      ${Button_Adicionar_PLP} [1]                       visible                      ${DEFAULT_TIMEOUT}
 Limpar MiniCart
-    ${Itens_Cart}  Run Keyword And Return Status  Wait For Elements State                          ${itens_cart}                 visible  5
+    ${Itens_Cart}  Run Keyword And Return Status  Wait For Elements State                          ${itens_cart}                 visible  1
     IF  '${Itens_Cart}' == 'True'
       Click                                      ${Button_Minicart}
       Wait For Elements State                    ${MiniCart_Open}                                  visible                       ${DEFAULT_TIMEOUT}

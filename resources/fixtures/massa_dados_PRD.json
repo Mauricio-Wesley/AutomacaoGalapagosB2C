@@ -9,11 +9,8 @@
         "number":            "123",
         "payment":           "Cartão de Crédito",
         "complemento":       "casa",
-        "numero_cartao":     "4001020000000009",
-        "cvv":               "737",
-        "mes":               "03",
-        "ano":               "2030",
-        "parcelamento":      "1",
+        "card_number":       "4001020000000009",
+        "installment":       "1x",
         "categorias":[
             {"categoria":    "Família"},  
             {"categoria":    "Viva Aventuras"},  
@@ -25,11 +22,8 @@
         "password":          "Nunc@123",
         "fullname":          "Mauro Alves",
         "payment":           "Cartão de Crédito",
-        "numero_cartao":     "4001020000000009",
-        "cvv":               "737",
-        "mes":               "03",
-        "ano":               "2030",
-        "parcelamento":      "2",
+        "card_number":       "4001020000000009",
+        "installment":       "2x",
         "categorias":[
             {"categoria":    "Galera"},
             {"categoria":    "Desafie sua mente"},
@@ -41,9 +35,8 @@
         "password":          "Nunc@123",
         "fullname":          "Mauro Alves",
         "payment":           "Cartão de Crédito",
-        "numero_cartao":     "4001020000000009",
-        "cvv":               "737",
-        "parcelamento":      "3",
+        "card_number":       "4001020000000009",
+        "installment":       "3x",
         "name":              "Marlene",
         "categorias":[
             {"categoria":    "Galera"},
@@ -72,7 +65,7 @@
         "password":          "Nunc@123",
         "fullname":          "Mauro Alves",
         "name":              "Marlene",
-        "pagamento":         "Boleto",
+        "payment":           "Boleto",
         "produtos":[
             {"produto":      "Dobble"},
             {"produto":      "Dixit"}

@@ -15,7 +15,7 @@ ${Input_Card_Number}                                            id=cnumber
 ${Input_Card_Name}                                              id=cname
 ${Input_Card_Validity}                                          id=cvalidity
 ${Input_CVV}                                                    id=ccvv
-${Select_Select_Installment}                                    id=cinstallments
+${Select_Installment}                                           id=cinstallments
 ${Button_Entrar_Cadastrar}                                      css=a >> text='Entrar ou Cadastrar'
 ${Input_Search}                                                 css=.area-input input
 ${Button_Lupa}                                                  .desktop-search #lupa-desktop img
@@ -65,3 +65,4 @@ ${Checkbox_Accept_Terms}                                        css=.iconTerm[da
 ${Button_Create_Account}                                        css=button >> text='Criar minha conta'
 ${Text_Account_Created}                                         text=Conta criada com sucesso!
 ${Button_Go_Home}                                               css=button >> text='Ir para a home'
+${Option_Installment}                                           xpath=//div[@id='cinstallments']//span[contains(.,"
