@@ -28,7 +28,6 @@ Test Teardown                                    Encerrar teste
     Acessar página do carrinho
     Acessar página do checkout
     Login com usuário existente                  ${dados["tc2"]}                         Checkout
-    Ir para entrega
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc2"]}
 3
@@ -43,7 +42,6 @@ Test Teardown                                    Encerrar teste
     END
     Acessar página do carrinho
     Acessar página do checkout
-    Ir para entrega
     Ir para pagamento
     Selecionar pagamento                         ${dados["tc3"]}
 4

@@ -11,14 +11,12 @@ ${input_cep}                                                    id=CC-checkoutAd
 ${input_numero_da_casa}                                         id=CC-checkoutAddressBook-saddress2                      
 ${input_complemento}                                            id=CC-checkoutAddressBook-saddress3                      
 ${input_numero}                                                 id=CC-checkoutAddressBook-sphone                         
-${button_ir_para_pagamento}                                     id=handlePayment
-${button_selecionar_bandeira_cartao}                            xpath=(//span[@class="paymentimages"]/div/span)[1]
-${input_numero_do_cartao}                                       id=CC-checkoutPaymentDetails-cardNumber                  
-${select_parcelamento}                                          xpath=(//select[@class='col-md-12 form-control'])[3]             
-${input_nome_do_titular}                                        id=CC-checkoutPaymentDetails-nameOnCard               
-${select_mes_de_vencimento}                                     id=CC-checkoutPaymentDetails-endMonth       
-${select_ano_de_vencimento}                                     id=CC-checkoutPaymentDetails-endYear       
-${input_codigo_de_seguranca}                                    id=CC-checkoutPaymentDetails-cardCVV                     
+${Button_proceed_To_Paymen}                                     css=button.btn-shipping
+${Input_Card_Number}                                            id=cnumber  
+${Input_Card_Name}                                              id=cname
+${Input_Card_Validity}                                          id=cvalidity
+${Input_CVV}                                                    id=ccvv
+${Select_Select_Installment}                                    id=cinstallments
 ${Button_Entrar_Cadastrar}                                      css=a >> text='Entrar ou Cadastrar'
 ${Input_Search}                                                 css=.area-input input
 ${Button_Lupa}                                                  .desktop-search #lupa-desktop img
@@ -28,8 +26,7 @@ ${Input_Name}                                                   id=CC-acessoCada
 ${Input_Last_Name}                                              id=CC-acessoCadastro-lastName
 ${Input_Social_Name}                                            id=socialName
 ${Input_CPF}                                                    id=CC-acessoCadastro-document                                                       
-${Input_Telephone}                                              id=CC-acessoCadastro-phoneNumber                                          
-${input_email_primeiro_login}                                   xpath=(//input[@id='CC-userRegistration-emailAddress'])[2]                                            
+${Input_Telephone}                                              id=CC-acessoCadastro-phoneNumber                                                                              
 ${Input_Create_Password}                                        id=CC-acessoCadastro-password
 ${Input_Confirm_Password}                                       id=CC-acessoCadastro-confirmpassword
 ${button_acessar_primeiro_login}                                id=CC-acessoCadastro-register-submit
@@ -44,10 +41,10 @@ ${Button_Adiconar_PDP}                                          id=cc-prodDetail
 ${Breadcrumb}                                                   css=#breadcrumbTrail span >> text='
 ${Itens_Cart}                                                   css=div[class="quantity-cart-items"]>span
 ${Button_Minicart}                                              css=.cart-container i
-${Title_Checkout}                                               div[class='header-content'] h2[class='header-title-page']
-${Opt_Cartao}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[1]
-${Opt_Boleto}                                                   xpath=(//ul[@class="nav nav-tabs"]/li)[2]
-${Opt_Pix}                                                      xpath=(//ul[@class="nav nav-tabs"]/li)[3]
+${Title_Checkout}                                               [class*="checkoutshoppinglist"]
+${Opt_Cartao}                                                   css=.title >> text='Cartão de crédito'
+${Opt_Boleto}                                                   css=.title >> text='Boleto bancário'
+${Opt_Pix}                                                      css=.title >> text='Pix'
 ${Loader}                                                       id=cc-spinner
 ${Loader_Galapagos}                                             css=.logo_iguana
 ${text_titulo_PDP}                                              css=h1[class='product-title']

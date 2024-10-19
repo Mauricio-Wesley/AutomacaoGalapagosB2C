@@ -73,37 +73,30 @@ Cadastrar novo endereço
     Type Text                                    ${input_cep}                                      ${dados["cep"]}               5ms
     Type Text                                    ${input_numero_da_casa}                           254                           5ms
     Click                                        ${input_complemento} 
-    Type Text                                    ${input_complemento}                              ${dados["fullname"]}       5ms
+    Type Text                                    ${input_complemento}                              ${dados["fullname"]}          5ms
     Type Text                                    ${input_numero}                                   ${dados["telephone"]}          5ms
     Aguardar loader                              ${Loader}
 Selecionar pagamento
     [Arguments]                                  ${dados}
     IF  "${dados["payment"]}" == "Cartão de Crédito"
-        Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
-        Click                                    ${opt_boleto}
-        Click                                    ${opt_cartao}
-        Click                                    ${button_selecionar_bandeira_cartao}
-        Type Text                                ${input_numero_do_cartao}                         ${dados["numero_cartao"]}     5ms
-        Select Options By                        ${select_parcelamento}                            value                         ${dados["parcelamento"]}
-        Type Text                                ${input_nome_do_titular}                          ${dados["nome_titular"]}      5ms
-        Select Options By                        ${select_mes_de_vencimento}                       value                         ${dados["mes"]}
-        Select Options By                        ${select_ano_de_vencimento}                       value                         ${dados["ano"]}
-        Type Text                                ${input_codigo_de_seguranca}                      ${dados["cvv"]}               5ms
+        Click                                    ${Opt_cartao}
+        Type Text                                ${Input_Card_Number}                              4001020000000009              5ms
+        Type Text                                ${Input_Card_Name}                                ${dados["fullname"]}          5ms
+        Type Text                                ${Input_Card_Validity}                            0526                          5ms
+        Type Text                                ${Input_CVV}                                      123                           5ms
+        Click                                    ${Select_Select_Installment}
+        Click                                    xpath=(//div[@id='cinstallments']//div) [4]
     END
     IF  "${dados["payment"]}" == "Boleto"
-        Wait For Elements State                  ${opt_boleto}                                     visible                       ${DEFAULT_TIMEOUT}
-        Click                                    ${opt_boleto}
+        Click                                    ${Opt_Boleto}
     END
     IF  "${dados["payment"]}" == "pix"
-        Wait For Elements State                  ${opt_cartao}                                     visible                       ${DEFAULT_TIMEOUT}
-        Click                                    ${opt_pix}
-        Aguardar loader                          ${Loader}
+        Click                                    ${Opt_Pix}
     END
 Ir para pagamento
-    Wait For Elements State                      ${button_ir_para_pagamento}                       visible                       ${DEFAULT_TIMEOUT}
-    Click                                        ${button_ir_para_pagamento}
-    Wait For Elements State                      ${button_ir_para_pagamento}                       hidden                        ${DEFAULT_TIMEOUT}
-    Wait For Elements State                      ${opt_boleto}                                     visible                       ${DEFAULT_TIMEOUT}
+    Wait For Elements State                      ${Button_proceed_To_Paymen}                       visible                       ${DEFAULT_TIMEOUT}
+    Click                                        ${Button_proceed_To_Paymen}
+    Aguardar loader                              ${Loader}
 Login com usuário existente
     [Arguments]                                  ${dados}                                          ${pagina}
     Type Text                                    ${Input_Email}                                    ${dados["email"]}             50ms
@@ -111,6 +104,7 @@ Login com usuário existente
     Click                                        ${Button_Continue_Login}
     Type Text                                    ${Input_Password}                                 ${dados["password"]}          50ms
     Click                                        ${Button_Login_In}
+    Wait For Elements State                      css=${Container_Carrossel_Home}, ${Title_Checkout}                              visible                   
 Acessar página de login
     Wait For Elements State                      ${Button_Entrar_Cadastrar}                        visible                       ${DEFAULT_TIMEOUT}
     Click                                        ${Button_Entrar_Cadastrar}
