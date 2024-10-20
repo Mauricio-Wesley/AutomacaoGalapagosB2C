@@ -59,13 +59,12 @@ Cadastrar novo usuário
     Wait For Elements State                      css=${Container_Carrossel_Home}, ${Title_Checkout}                              visible
 Cadastrar novo endereço
     [Arguments]                                  ${dados}
-    Wait For Elements State                      ${input_cep}                                      visible                       ${DEFAULT_TIMEOUT}
-    Type Text                                    ${input_cep}                                      ${dados["cep"]}               5ms
-    Type Text                                    ${input_numero_da_casa}                           254                           5ms
-    Click                                        ${input_complemento} 
-    Type Text                                    ${input_complemento}                              ${dados["fullname"]}          5ms
-    Type Text                                    ${input_numero}                                   ${dados["telephone"]}         5ms
+    Wait For Elements State                      ${Input_Zip_Code}                                 visible
+    Type Text                                    ${Input_Zip_Code}                                 ${dados["zipcode"]}           5ms
     Aguardar loader                              ${Loader}
+    Type Text                                    ${Input_Address_Name}                             Casa                          5ms
+    Type Text                                    ${Input_House_Number}                             254                           5ms
+    Click                                        ${Button_Proceed_To_Shipping}
 Selecionar pagamento
     [Arguments]                                  ${dados}
     IF  "${dados["payment"]}" == "Cartão de Crédito"
@@ -105,14 +104,14 @@ Acessar PDP
     Wait For Elements State                      ${Text_Titulo_PDP}                                visible                       ${DEFAULT_TIMEOUT}
 Busca no search
     [Arguments]                                  ${produto}
-    Wait For Elements State                      ${Button_Lupa}                                    visible                       ${DEFAULT_TIMEOUT}
-    Click                                        ${Button_Lupa}
+    Wait For Elements State                      ${Button_Search}                                  visible                       ${DEFAULT_TIMEOUT}
+    Click                                        ${Button_Search}
     Type Text                                    ${Input_Search}                                   ${produto}                    5ms
     Keyboard Key                                 press                                             Enter
     Wait For Elements State                      ${Breadcrumb}${produto}'                          visible                      ${DEFAULT_TIMEOUT}
     Wait For Elements State                      ${Button_Adicionar_PLP} [1]                       visible                      ${DEFAULT_TIMEOUT}
 Limpar MiniCart
-    ${Itens_Cart}  Run Keyword And Return Status  Wait For Elements State                          ${itens_cart}                 visible  1
+    ${Itens_Cart}  Run Keyword And Return Status  Wait For Elements State                          ${itens_cart}                 visible  3
     IF  '${Itens_Cart}' == 'True'
       Click                                      ${Button_Minicart}
       Wait For Elements State                    ${MiniCart_Open}                                  visible                       ${DEFAULT_TIMEOUT}

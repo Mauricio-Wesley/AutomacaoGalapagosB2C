@@ -6,10 +6,10 @@ ${Title_Cart}                                                   css=h2 >> text='
 ${Button_Finalizar_Pedido}                                      id=CC-orderSummary-checkout
 ${input_nome}                                                   id=CC-checkoutAddressBook-sfirstname                
 ${input_sobrenome}                                              id=CC-checkoutAddressBook-slastname                      
-${input_cep}                                                    id=CC-checkoutAddressBook-szipcode                       
-${input_numero_da_casa}                                         id=CC-checkoutAddressBook-saddress2                      
-${input_complemento}                                            id=CC-checkoutAddressBook-saddress3                      
-${input_numero}                                                 id=CC-checkoutAddressBook-sphone                         
+${Input_Zip_Code}                                               id=CC-checkoutAddressBook-szipcode
+${Input_Address_Name}                                           id=CC-checkoutAddressBook-sfirstname-form
+${Input_House_Number}                                           id=CC-checkoutAddressBook-saddress2-form
+${Button_Proceed_To_Shipping}                                   css=button.send-success
 ${Button_proceed_To_Paymen}                                     css=button.btn-shipping
 ${Input_Card_Number}                                            id=cnumber  
 ${Input_Card_Name}                                              id=cname
@@ -18,7 +18,7 @@ ${Input_CVV}                                                    id=ccvv
 ${Select_Installment}                                           id=cinstallments
 ${Button_Entrar_Cadastrar}                                      css=a >> text='Entrar ou Cadastrar'
 ${Input_Search}                                                 css=.area-input input
-${Button_Lupa}                                                  .desktop-search #lupa-desktop img
+${Button_Search}                                                .desktop-search #lupa-desktop img
 ${Dropdown_Catalago}                                            id=Catalogo
 ${text_subtitle_meu_primeiro_acesso}                            xpath=//h2[text()='Meu Primeiro Acesso']                                        
 ${Input_Name}                                                   id=CC-acessoCadastro-firstName
